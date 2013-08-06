@@ -42,3 +42,5 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 ### Help
 
 [Simple Custom CSS Wiki](https://github.com/johnregan3/simple-custom-css/wiki "Simple Custom CSS Wiki")
+
+[Support Forum](http://wordpress.org/support/plugin/simple-custom-css "Support Forum")
