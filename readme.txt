@@ -1,12 +1,14 @@
-=== Plugin Name ===
+=== Simple Custom CSS ===
 Contributors: johnregan3
+Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BAG2XC69ZYADQ
 Tags: css, styles, custom css, custom,
 Requires at least: 3.0.1
 Tested up to: 3.6
+Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A plugin is designed to meet the needs of administrators who would like to add custom CSS to their WordPress website.
+Add Custom CSS to your WordPress site without any hassles.
 
 == Description ==
 
@@ -73,8 +75,6 @@ The specificity you need depends upon the CSS rules you are attempting to overri
 
 Please check your CSS at the [W3C CSS Validation Service](http://jigsaw.w3.org/css-validator/#validate_by_input+with_options" "W3C CSS Validation Service").
 
-
-
 == Screenshots ==
 
 1. The Simple Custom CSS Administration Screen
@@ -83,3 +83,7 @@ Please check your CSS at the [W3C CSS Validation Service](http://jigsaw.w3.org/c
 
 = 1.0 =
 * Inital Release
+
+== Upgrade Notice ==
+
+Initial Release

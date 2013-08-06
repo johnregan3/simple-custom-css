@@ -17,7 +17,7 @@ An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin an
 
 Install Simple Custom CSS just as you would any other WP Plugin:
 
-1.  Download Simple Custom CSS from WordPress.org.
+1.  [Download Simple Custom CSS](http://wordpress.org/plugins/simple-custom-css/ "Download Simple Custom CSS") from WordPress.org.
 
 2.  Unzip the .zip file.
 
