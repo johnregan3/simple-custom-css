@@ -3,7 +3,7 @@ Simple Custom CSS Plugin
 
 An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin and Theme default styles.
 
-***Features
+**Features**
 
 - Simple but effective interface built on WordPress UI
 - Virtually no impact on site performance
