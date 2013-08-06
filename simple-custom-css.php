@@ -146,7 +146,7 @@ function sccss_render_submenu_page() {
 		<form name="sccss-form" id="template" action="options.php" method="post" enctype="multipart/form-data">
 			<?php settings_fields('sccss_settings_group'); ?>
 			<div>
-				<textarea cols="70" rows="30" name="sccss_settings[sccss-content]" id="sccss_settings[sccss-content]" ><?php echo $content; ?></textarea>
+				<textarea cols="70" rows="30" name="sccss_settings[sccss-content]" id="sccss_settings[sccss-content]" ><?php echo esc_html( $content ); ?></textarea>
 				<input type="hidden" name="action" value="update" />
 			</div>
 			<div>
