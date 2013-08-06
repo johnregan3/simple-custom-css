@@ -6,11 +6,11 @@ Tested up to: 3.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
+A plugin is designed to meet the needs of administrators who would like to add custom CSS to their WordPress website.
 
 == Description ==
 
-An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin and Theme default styles.
+An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin and Theme default styles. This plugin is designed to meet the needs of administrators who would like to add their own CSS to their WordPress website.
 
 **Features**
 
@@ -18,7 +18,7 @@ An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin an
 - Virtually no impact on site performance
 - No javascript files or complicated PHP requests
 - Generates no CSS files
-- Extremely small filesize (~3KB)
+- Extremely lightweight (~4KB)
 
 A few notes about the sections above:
 
@@ -38,7 +38,7 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 
 = Will this Plugin work on my WordPress.com website? =
 
-Sorry, this plugin is available for use only on self-hosted ( WordPress.org) websites.
+Sorry, this plugin is available for use only on self-hosted (WordPress.org) websites.
 
 = My Custom CSS isn't showing up =
 
@@ -48,7 +48,7 @@ There are several reasons this could be happening:
 
 * Your CSS selectors aren't specific enough.
 
-For instace, you may have:
+For instance, you may have:
 
 	a {
 		color: #f00;
