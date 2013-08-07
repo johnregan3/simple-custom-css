@@ -149,11 +149,13 @@ function sccss_render_submenu_page() {
 			<div>
 				<textarea cols="70" rows="30" name="sccss_settings[sccss-content]" id="sccss_settings[sccss-content]" ><?php echo esc_html( $content ); ?></textarea>
 			</div>
-			<?php do_action('sccss-form-bottom'); ?>
+			<?php do_action('sccss-textarea-bottom'); ?>
 			<div>
 				<?php submit_button( __( 'Update Custom CSS', 'sccss' ), 'primary', 'submit', true ); ?>
 			</div>
+			<?php do_action('sccss-form-bottom'); ?>
 		</form>
+
 
 	</div>
 
