@@ -21,7 +21,8 @@ An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin an
 - Virtually no impact on site performance
 - No javascript files or complicated PHP requests
 - Generates no CSS files
-- Extremely lightweight (~4KB)
+- Extremely lightweight (~5KB)
+- Thorough documentation
 
 A few notes about the sections above:
 
@@ -29,7 +30,7 @@ A few notes about the sections above:
 
 Install Simple Custom CSS just as you would any other WP Plugin:
 
-1.  Download Simple Custom CSS from WordPress.org.
+1.  [Download Simple Custom CSS](http://wordpress.org/plugins/simple-custom-css "Simple Custom CSS") from WordPress.org.
 
 2.  Unzip the .zip file.
 
@@ -80,6 +81,10 @@ Please check your CSS at the [W3C CSS Validation Service](http://jigsaw.w3.org/c
 1. The Simple Custom CSS Administration Screen
 
 == Changelog ==
+
+= 1.1 NOT YET ADDED =
+* Removed unneeded hidden input
+* Added Action Hooks
 
 = 1.0 =
 * Inital Release

@@ -25,7 +25,7 @@
  *
  * @package SCCSS
  * @author John Regan
- * @version 1.0
+ * @version 1.1
  */
 
 
@@ -144,10 +144,12 @@ function sccss_render_submenu_page() {
 		</div>
 
 		<form name="sccss-form" id="template" action="options.php" method="post" enctype="multipart/form-data">
+			<?php do_action('sccss-form-top'); ?>
 			<?php settings_fields('sccss_settings_group'); ?>
 			<div>
 				<textarea cols="70" rows="30" name="sccss_settings[sccss-content]" id="sccss_settings[sccss-content]" ><?php echo esc_html( $content ); ?></textarea>
 			</div>
+			<?php do_action('sccss-form-bottom'); ?>
 			<div>
 				<?php submit_button( __( 'Update Custom CSS', 'sccss' ), 'primary', 'submit', true ); ?>
 			</div>
