@@ -44,3 +44,21 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 [Simple Custom CSS Wiki](https://github.com/johnregan3/simple-custom-css/wiki "Simple Custom CSS Wiki")
 
 [Support Forum](http://wordpress.org/support/plugin/simple-custom-css "Support Forum")
+
+###Changelog
+
+***1.1***
+* Removed unneeded hidden input
+* Added Action Hooks
+* Added cleanup on deletion
+* Added author attribution option
+* Changed method for adding CSS into the page:
+
+Instead of using print_scripts to insert the CSS directly into the <HEAD>, CSS styles are generated within simple-custom-css.php (the sole file for this plugin), then added via enqueue_scripts, so now it will appear in the <HEAD> as
+
+		<link rel="stylesheet" href="scss-style.css" />
+
+...even though no css file is actually generated.
+
+***1.0***
+* Inital Release

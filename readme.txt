@@ -1,7 +1,7 @@
 === Simple Custom CSS ===
 Contributors: johnregan3
 Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BAG2XC69ZYADQ
-Tags: css, styles, custom css, custom,
+Tags: css, styles, custom css, custom
 Requires at least: 3.0.1
 Tested up to: 3.6
 Stable tag: trunk
@@ -82,13 +82,26 @@ Please check your CSS at the [W3C CSS Validation Service](http://jigsaw.w3.org/c
 
 == Changelog ==
 
-= 1.1 NOT YET ADDED =
+= 1.1 =
 * Removed unneeded hidden input
 * Added Action Hooks
+* Added cleanup on deletion
+* Added author attribution option
+* Changed method for adding CSS into the page:
+
+Instead of using print_scripts to insert the CSS directly into the <HEAD>, CSS styles are generated within simple-custom-css.php (the sole file for this plugin), then added via enqueue_scripts, so now it will appear in the <HEAD> as
+
+		<link rel="stylesheet" href="scss-style.css" />
+
+...even though no css file is actually generated.
 
 = 1.0 =
 * Inital Release
 
 == Upgrade Notice ==
 
-Initial Release
+= 1.1 =
+Changed method for inserting CSS, added support for cleanup on deletion, other minor changes.
+
+= 1.0 =
+Inital Release
