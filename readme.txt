@@ -19,12 +19,10 @@ An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin an
 - No configuration needed
 - Simple interface built on WordPress UI
 - Virtually no impact on site performance
-- No javascript files or complicated PHP requests
+- No JavaScript files or complicated database queries
 - Generates no CSS files
-- Extremely lightweight (~5KB)
+- Extremely lightweight (~7KB)
 - Thorough documentation
-
-A few notes about the sections above:
 
 == Installation ==
 
@@ -87,13 +85,13 @@ Please check your CSS at the [W3C CSS Validation Service](http://jigsaw.w3.org/c
 * Added Action Hooks
 * Added cleanup on deletion
 * Added author attribution option
-* Changed method for adding CSS into the page:
+* Added a more elegant method for adding CSS to the page:
 
-Instead of using print_scripts to insert the CSS directly into the HEAD, CSS styles are generated within simple-custom-css.php (the sole file for this plugin), then added via enqueue_scripts, so now it will appear in the HEAD as
+Instead of using print_scripts to insert the CSS directly into the HEAD, CSS styles are generated within simple-custom-css.php (the sole file for this plugin), then added via wp_enqueue_scripts, so now it will appear in the HEAD as:
 
-		<link rel="stylesheet" href="scss-style.css" />
+		<link rel="stylesheet" href="http://yoursite.com/?sccss=1" />
 
-...even though no css file is actually generated.
+...even though no css file is actually generated.  Please see the comments within the Plugin file for more detailed information.
 
 = 1.0 =
 * Inital Release
