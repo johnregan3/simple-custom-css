@@ -89,7 +89,7 @@ Please check your CSS at the [W3C CSS Validation Service](http://jigsaw.w3.org/c
 * Added author attribution option
 * Changed method for adding CSS into the page:
 
-Instead of using print_scripts to insert the CSS directly into the <HEAD>, CSS styles are generated within simple-custom-css.php (the sole file for this plugin), then added via enqueue_scripts, so now it will appear in the <HEAD> as
+Instead of using print_scripts to insert the CSS directly into the HEAD, CSS styles are generated within simple-custom-css.php (the sole file for this plugin), then added via enqueue_scripts, so now it will appear in the HEAD as
 
 		<link rel="stylesheet" href="scss-style.css" />
 
