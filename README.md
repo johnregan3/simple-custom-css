@@ -47,6 +47,9 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 
 ###Changelog
 
+*** 1.1.1 ***
+* Allowing the ">" direct child selector.
+
 ***1.1***
 * Removed unneeded hidden input
 * Added Action Hooks

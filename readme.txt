@@ -80,6 +80,9 @@ Please check your CSS at the [W3C CSS Validation Service](http://jigsaw.w3.org/c
 
 == Changelog ==
 
+= 1.1.1 =
+Allowing the ">" direct child selector.
+
 = 1.1 =
 * Removed unneeded hidden input
 * Added Action Hooks
@@ -97,6 +100,9 @@ Instead of using print_scripts to insert the CSS directly into the HEAD, CSS sty
 * Inital Release
 
 == Upgrade Notice ==
+
+= 1.1.1 =
+Allowing the ">" direct child selector.
 
 = 1.1 =
 Changed method for inserting CSS, added support for cleanup on deletion, other minor changes.
