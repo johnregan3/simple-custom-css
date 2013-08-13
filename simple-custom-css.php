@@ -112,6 +112,8 @@ add_filter('query_vars','sccss_add_trigger');
 /**
  * If trigger (query var) is tripped, load our pseudo-stylesheet
  *
+ * I'd prefer to esc $content at the very last moment, but we need to allow the > character.
+ *
  * @since 1.1
  */
 function sccss_trigger_check() {
@@ -120,8 +122,7 @@ function sccss_trigger_check() {
 			header('Content-type: text/css');
 			$options = get_option( 'sccss_settings' );
 				$raw_content = isset( $options['sccss-content'] ) ? $options['sccss-content'] : '';
-				//I'd prefer to esc the content at the very last moment, but we need to allow the > character.
-				$esc_content = esc_textarea( $raw_content );
+				$esc_content = esc_html( $raw_content );
 				$content = str_replace( '&gt;', '>', $esc_content );
 				if ( isset( $content ) ) {
 					echo "/*
