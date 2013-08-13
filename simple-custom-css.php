@@ -5,7 +5,7 @@
  * Description: The simple, solid way to add custom CSS to your WordPress website. Simple Custom CSS allows you to add your own styles or override the default CSS of a plugin or theme.</p>
  * Author: John Regan
  * Author URI: http://johnregan3.me
- * Version: 1.1
+ * Version: 1.2
  * Text Domain: sccss
  *
  * Copyright 2013  John Regan  (email : johnregan3@outlook.com)
@@ -25,7 +25,7 @@
  *
  * @package SCCSS
  * @author John Regan
- * @version 1.1
+ * @version 1.2
  */
 
 
@@ -119,15 +119,18 @@ function sccss_trigger_check() {
 		ob_start();
 			header('Content-type: text/css');
 			$options = get_option( 'sccss_settings' );
-				$content = isset( $options['sccss-content'] ) ? $options['sccss-content'] : '';
-				if ( isset( $options['sccss-credit'] ) ) {
+				$raw_content = isset( $options['sccss-content'] ) ? $options['sccss-content'] : '';
+				//I'd prefer to esc the content at the very last moment, but we need to allow the > character.
+				$esc_content = esc_textarea( $raw_content );
+				$content = str_replace( '&gt;', '>', $esc_content );
+				if ( isset( $content ) ) {
 					echo "/*
  * Created by the Simple Custom CSS Plugin
  * by John Regan (http://johregan3.me)
  * http://wordpress.org/plugins/simple-custom-css/
  */\n\n";
 				}
-				echo esc_html( $content );
+				echo $content;
 			exit;
 		ob_clean();
 	}
