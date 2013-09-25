@@ -47,12 +47,12 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 
 ###Changelog
 
-*** 1.2 ***
+***1.2***
 * Give Admins (not just Super Admins) access to the plugin
 * Correcting Credit error
 * Minor Bugfixes
 
-*** 1.1.1 ***
+***1.1.1***
 * Allowing the ">" direct child selector.
 
 ***1.1***
