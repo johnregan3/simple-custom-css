@@ -5,7 +5,7 @@
  * Description: The simple, solid way to add custom CSS to your WordPress website. Simple Custom CSS allows you to add your own styles or override the default CSS of a plugin or theme.</p>
  * Author: John Regan
  * Author URI: http://johnregan3.me
- * Version: 1.1.1
+ * Version: 1.2
  * Text Domain: sccss
  *
  * Copyright 2013  John Regan  (email : johnregan3@outlook.com)
@@ -25,7 +25,7 @@
  *
  * @package SCCSS
  * @author John Regan
- * @version 1.1.1
+ * @version 1.2
  */
 
 
@@ -87,8 +87,8 @@ register_uninstall_hook( __FILE__, 'sccss_uninstall' );
  * @since 1.1
  */
 function sccss_register_style() {
-	wp_register_style( 'my-plugin', '/?sccss=1' );
-	wp_enqueue_style( 'my-plugin' );
+	wp_register_style( 'sccss_style', '/?sccss=1' );
+	wp_enqueue_style( 'sccss_style' );
 }
 
 add_action( 'wp_enqueue_scripts', 'sccss_register_style', 99 );
@@ -124,10 +124,9 @@ function sccss_trigger_check() {
 				$raw_content = isset( $options['sccss-content'] ) ? $options['sccss-content'] : '';
 				$esc_content = esc_html( $raw_content );
 				$content = str_replace( '&gt;', '>', $esc_content );
-				if ( isset( $content ) ) {
-					echo "/*
+				if( isset( $options['sccss-credit'] ) ) {
+echo "/*
  * Created by the Simple Custom CSS Plugin
- * by John Regan (http://johregan3.me)
  * http://wordpress.org/plugins/simple-custom-css/
  */\n\n";
 				}
@@ -147,7 +146,7 @@ add_action( 'template_redirect', 'sccss_trigger_check' );
  * @since 1.0
  */
 function sccss_register_submenu_page() {
-	add_theme_page( __( 'Simple Custom CSS', 'sccss' ), __( 'Custom CSS', 'sccss' ), 'edit_themes', basename(__FILE__), 'sccss_render_submenu_page' );
+	add_theme_page( __( 'Simple Custom CSS', 'sccss' ), __( 'Custom CSS', 'sccss' ), 'manage_options', basename(__FILE__), 'sccss_render_submenu_page' );
 }
 
 add_action( 'admin_menu', 'sccss_register_submenu_page' );
