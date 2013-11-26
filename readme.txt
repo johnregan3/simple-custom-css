@@ -3,7 +3,7 @@ Contributors: johnregan3
 Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BAG2XC69ZYADQ
 Tags: css, styles, custom css, custom
 Requires at least: 3.0.1
-Tested up to: 3.6.1
+Tested up to: 3.7.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -80,6 +80,11 @@ Please check your CSS at the [W3C CSS Validation Service](http://jigsaw.w3.org/c
 
 == Changelog ==
 
+= 1.2.1 =
+
+* Testing for compatibility with WP 3.7.1
+* Code update to conform fully with WP coding standards.
+
 = 1.2 =
 * Give Admins (not just Super Admins) access to the plugin
 * Correcting Credit error
@@ -105,6 +110,9 @@ Instead of using print_scripts to insert the CSS directly into the HEAD, CSS sty
 * Inital Release
 
 == Upgrade Notice ==
+
+= 1.2.1 =
+Compatibility with WP 3.7.1, code update to conform with WP coding standards.
 
 = 1.2 =
 Give Admins (not just Super Admins) access to the plugin & Correcting Credit error.
