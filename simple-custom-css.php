@@ -121,9 +121,7 @@ function sccss_trigger_check() {
 		ob_start();
 			header( 'Content-type: text/css' );
 			$options = get_option( 'sccss_settings' );
-				$raw_content = isset( $options['sccss-content'] ) ? $options['sccss-content'] : '';
-				$esc_content = esc_html( $raw_content );
-				$content     = str_replace( '&gt;', '>', $esc_content );
+				$content = isset( $options['sccss-content'] ) ? $options['sccss-content'] : '';
 				if( isset( $options['sccss-credit'] ) ) {
 echo "/*
  * Created by the Simple Custom CSS Plugin
