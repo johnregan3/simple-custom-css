@@ -5,10 +5,10 @@
  * Description: The simple, solid way to add custom CSS to your WordPress website. Simple Custom CSS allows you to add your own styles or override the default CSS of a plugin or theme.</p>
  * Author: John Regan
  * Author URI: http://johnregan3.me
- * Version: 1.2.1
+ * Version: 2.0
  * Text Domain: sccss
  *
- * Copyright 2013  John Regan  (email : johnregan3@outlook.com)
+ * Copyright 2014  John Regan  (email : john@johnregan3.com)
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2, as
@@ -25,7 +25,7 @@
  *
  * @package SCCSS
  * @author John Regan
- * @version 1.2
+ * @version 2.0
  */
 
 
@@ -121,10 +121,14 @@ function sccss_trigger_check() {
 		ob_start();
 			header( 'Content-type: text/css' );
 			$options = get_option( 'sccss_settings' );
+			if ( isset( $options['sccss-quotes'] ) ) {
+				$content = $options['sccss-content'];
+			} else {
 				$raw_content = isset( $options['sccss-content'] ) ? $options['sccss-content'] : '';
 				$esc_content = esc_html( $raw_content );
 				$content     = str_replace( '&gt;', '>', $esc_content );
-				if( isset( $options['sccss-credit'] ) ) {
+			}
+			if( isset( $options['sccss-credit'] ) ) {
 echo "/*
  * Created by the Simple Custom CSS Plugin
  * http://wordpress.org/plugins/simple-custom-css/
@@ -172,6 +176,7 @@ add_action( 'admin_init', 'sccss_register_settings' );
 function sccss_render_submenu_page() {
 
 	$options = get_option( 'sccss_settings' );
+	$quotes  = isset( $options['sccss-quotes'] ) ? $options['sccss-quotes'] : '';
 	$credit  = isset( $options['sccss-credit'] ) ? 1 : 0 ;
 	$content = isset( $options['sccss-content'] ) ? $options['sccss-content'] : '';
 
@@ -193,12 +198,18 @@ function sccss_render_submenu_page() {
 					<li><?php _e( 'Enjoy your new CSS styles!', 'sccss' ) ?></li>
 				</ol>
 				<p>&nbsp;</p>
+				<h3>Allow Double Quotes</h3>
+				<p>
+					<input type="checkbox" name="sccss_settings[sccss-quotes]" value="1" <?php checked( 1, $quotes ); ?> />&nbsp;&nbsp;<?php _e( 'Allow Double Quotes', 'sccss' ) ?><br />
+					<span class="description"><?php _e( 'Some CSS selectors use quotation marks (").  In order to allow these, it requres a small adjustment to the way the CSS is output. It is recommended that you only enable this if it is necessary.', 'sccss' ); ?></span>
+				</p>
+				<p>&nbsp;</p>
 				<h3><?php _e( 'Help', 'sccss' ) ?></h3>
 				<p><a href="<?php echo esc_url( 'https://github.com/johnregan3/simple-custom-css/wiki' ); ?>" ><?php _e( 'Simple Custom CSS Wiki', 'sccss' ); ?></a></p>
 				<p>&nbsp;</p>
 				<h3>Attribution</h3>
 				<p>
-					<input type="checkbox" name="sccss_settings[sccss-credit]" value="1" <?php checked( 1, $credit ); ?> />&nbsp;&nbsp;This Plugin is Really Helpful!<br />
+					<input type="checkbox" name="sccss_settings[sccss-credit]" value="1" <?php checked( 1, $credit ); ?> />&nbsp;&nbsp;<?php _e( 'This Plugin is Really Helpful!', 'sccss' ) ?><br />
 					<span class="description"><?php _e( 'Print credit to the author within the CSS file. No text will appear on your website.', 'sccss' ); ?></span>
 				</p>
 				<?php do_action( 'sccss-sidebar-bottom' ); ?>

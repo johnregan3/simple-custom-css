@@ -3,7 +3,7 @@ Contributors: johnregan3
 Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BAG2XC69ZYADQ
 Tags: css, styles, custom css, custom
 Requires at least: 3.0.1
-Tested up to: 3.7.1
+Tested up to: 3.8
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,6 +13,8 @@ Add Custom CSS to your WordPress site without any hassles.
 == Description ==
 
 An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin and Theme default styles. This plugin is designed to meet the needs of administrators who would like to add their own CSS to their WordPress website.
+
+**Now Allows Double Quotes in CSS Selectors!**
 
 **Features**
 
@@ -80,6 +82,10 @@ Please check your CSS at the [W3C CSS Validation Service](http://jigsaw.w3.org/c
 
 == Changelog ==
 
+= 2.0 =
+* Added option to allow Double Quotes in CSS
+* Tested for compatibility with WP 3.8
+
 = 1.2.1 =
 
 * Testing for compatibility with WP 3.7.1
@@ -110,6 +116,9 @@ Instead of using print_scripts to insert the CSS directly into the HEAD, CSS sty
 * Inital Release
 
 == Upgrade Notice ==
+
+= 2.0 =
+Now SCCSS gives you the option to allow Double Quotes!
 
 = 1.2.1 =
 Compatibility with WP 3.7.1, code update to conform with WP coding standards.
