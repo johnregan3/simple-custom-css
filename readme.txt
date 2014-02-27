@@ -16,7 +16,7 @@ An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin an
 
 **Now Allows Double Quotes in CSS Selectors!**
 
-**Now Works Correctly in Subdirectory Installs!**
+**Now Supports Subdirectory Installs!**
 
 **Features**
 
