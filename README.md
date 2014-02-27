@@ -3,6 +3,11 @@ Simple Custom CSS Plugin
 
 An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin and Theme default styles.  This plugin is designed to meet the needs of administrators who would like to add custom CSS to their WordPress website.
 
+
+***Now Allows Double Quotes in CSS Selectors!***
+
+***Now Works Correctly in Subdirectory Installs!***
+
 **Features**
 
 - No configuration needed
