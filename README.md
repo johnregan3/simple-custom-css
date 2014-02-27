@@ -47,6 +47,18 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 
 ###Changelog
 
+***2.5***
+* Fixed issue with WP installs in subdirectories.  Thanks @lopo!
+* Tested for compatibility with WP 3.8.1
+
+***2.0***
+* Added option to allow Double Quotes in CSS
+* Tested for compatibility with WP 3.8
+
+***1.2.1***
+* Tested for compatibility with WP 3.7.1
+* Code update to conform fully with WP coding standards.
+
 ***1.2***
 * Give Admins (not just Super Admins) access to the plugin
 * Correcting Credit error
