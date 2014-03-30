@@ -121,19 +121,16 @@ function sccss_trigger_check() {
 		ob_start();
 			header( 'Content-type: text/css' );
 			$options = get_option( 'sccss_settings' );
-			if ( isset( $options['sccss-quotes'] ) ) {
-				$content = $options['sccss-content'];
-			} else {
-				$raw_content = isset( $options['sccss-content'] ) ? $options['sccss-content'] : '';
-				$esc_content = esc_html( $raw_content );
-				$content     = str_replace( '&gt;', '>', $esc_content );
-			}
+
 			if ( isset( $options['sccss-credit'] ) ) {
 echo "/*
  * Created by the Simple Custom CSS Plugin
  * http://wordpress.org/plugins/simple-custom-css/
  */\n\n";
 				}
+				$raw_content = isset( $options['sccss-content'] ) ? $options['sccss-content'] : '';
+				$content     = wp_kses( $raw_content, array( '\'', '\"' ) );
+				$content     = str_replace( '&gt;', '>', $content );
 				echo $content;
 			exit;
 		ob_clean();
@@ -176,7 +173,6 @@ add_action( 'admin_init', 'sccss_register_settings' );
 function sccss_render_submenu_page() {
 
 	$options = get_option( 'sccss_settings' );
-	$quotes  = isset( $options['sccss-quotes'] ) ? $options['sccss-quotes'] : '';
 	$credit  = isset( $options['sccss-credit'] ) ? 1 : 0 ;
 	$content = isset( $options['sccss-content'] ) ? $options['sccss-content'] : '';
 
@@ -196,12 +192,6 @@ function sccss_render_submenu_page() {
 					<li><?php _e( 'Click "Update Custom CSS."', 'sccss' ) ?></li>
 					<li><?php _e( 'Enjoy your new CSS styles!', 'sccss' ) ?></li>
 				</ol>
-				<p>&nbsp;</p>
-				<h3>Allow Double Quotes</h3>
-				<p>
-					<input type="checkbox" name="sccss_settings[sccss-quotes]" value="1" <?php checked( 1, $quotes ); ?> />&nbsp;&nbsp;<?php _e( 'Allow Double Quotes', 'sccss' ) ?><br />
-					<span class="description"><?php _e( 'Some CSS selectors use quotation marks (").  In order to allow these, it requres a small adjustment to the way the CSS is output. It is recommended that you only enable this if it is necessary.', 'sccss' ); ?></span>
-				</p>
 				<p>&nbsp;</p>
 				<h3><?php _e( 'Help', 'sccss' ) ?></h3>
 				<p><a href="<?php echo esc_url( 'https://github.com/johnregan3/simple-custom-css/wiki' ); ?>" ><?php _e( 'Simple Custom CSS Wiki', 'sccss' ); ?></a></p>
