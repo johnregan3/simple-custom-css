@@ -245,7 +245,7 @@ function sccss_render_submenu_page() {
 		</form>
 		<script language="javascript">
 			jQuery( document ).ready( function() {
-				var editor = CodeMirror.fromTextArea( document.getElementById( "sccss_settings[sccss-content]" ) );
+				var editor = CodeMirror.fromTextArea( document.getElementById( "sccss_settings[sccss-content]" ), {lineNumbers: true, lineWrapping: true} );
 			});
 		</script>
 	</div>

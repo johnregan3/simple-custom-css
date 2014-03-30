@@ -7,8 +7,15 @@
     min-height: 100px;
     border: 1px solid #ddd;
     background: #f9f9f9;
-    width: 831px;
+    max-width: 831px;
+    width: 95%;
+    margin-right: 0;
 }
+
+.CodeMirror div {
+    margin-right: 0 !important;
+}
+
 .CodeMirror-scroll {
     /* Set scrolling behaviour here */
     overflow: auto;
@@ -32,11 +39,15 @@
 .CodeMirror-gutters {
     border-right: 1px solid #ddd;
     background-color: #f7f7f7;
+    min-width: 34px;
+}
+.CodeMirror-gutters .CodeMirror-gutter {
+    min-width: 20px !important;
 }
 .CodeMirror-linenumbers {}
 .CodeMirror-linenumber {
-    padding: 0 3px 0 5px;
-    min-width: 20px;
+    padding: 0;
+    min-width: 1em;
     text-align: right;
     color: #999;
 }
