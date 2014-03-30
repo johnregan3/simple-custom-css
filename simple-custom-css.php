@@ -93,6 +93,20 @@ function sccss_register_style() {
 
 add_action( 'wp_enqueue_scripts', 'sccss_register_style', 99 );
 
+
+/**
+ *
+ *
+ *
+ *
+ */
+function sccss_register_prism() {
+	wp_enqueue_style( 'codemirror-css', plugins_url( 'simple-custom-css/codemirror/codemirror.css' ) );
+	wp_enqueue_script( 'codemirror-js', plugins_url( 'simple-custom-css/codemirror/codemirror.js' ), array(), '20140329', true );
+	wp_enqueue_script( 'codemirror-css-js', plugins_url( 'simple-custom-css/codemirror/css.js' ), array(), '20140329', true );
+}
+add_action( 'admin_enqueue_scripts', 'sccss_register_prism' );
+
 /**
  * Add Query Var Stylesheet trigger
  *
@@ -225,6 +239,11 @@ function sccss_render_submenu_page() {
 				<?php do_action( 'sccss-form-bottom' ); ?>
 			</div>
 		</form>
+		<script language="javascript">
+			jQuery( document ).ready( function() {
+				var editor = CodeMirror.fromTextArea( document.getElementById( "sccss_settings[sccss-content]" ) );
+			});
+		</script>
 	</div>
 	<?php
 }
