@@ -32,6 +32,10 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 
 [More help installing Plugins](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins "WordPress Codex: Installing Plugins")
 
+### Screenshot
+
+<img src="https://raw.githubusercontent.com/johnregan3/simple-custom-css/master/assets/screenshot-1.png" width="530px" />
+
 ### Use
 
 1.  Navigate to Appearance > Custom CSS
