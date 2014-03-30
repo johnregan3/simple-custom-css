@@ -184,7 +184,6 @@ function sccss_render_submenu_page() {
 		<div id="message" class="updated"><p><?php _e( 'Custom CSS updated successfully.' ); ?></p></div>
 	<?php endif; ?>
 	<div class="wrap">
-		<?php screen_icon(); ?>
 		<h2><?php _e( 'Simple Custom CSS', 'sccss' ); ?></h2>
 		<p><?php _e( 'Simple Custom CSS allows you to add your own styles or override the default CSS of a plugin or theme.', 'sccss' ) ?></p>
 		<form name="sccss-form" action="options.php" method="post" enctype="multipart/form-data">
@@ -192,7 +191,7 @@ function sccss_render_submenu_page() {
 			<div id="templateside">
 				<?php do_action( 'sccss-sidebar-top' ); ?>
 				<h3><?php _e( 'Instructions', 'sccss' ) ?></h3>
-				<ol>
+				<ol style="margin-left:1.5em">
 					<li><?php _e( 'Enter your custom CSS in the the texarea to the right.', 'sccss' ) ?></li>
 					<li><?php _e( 'Click "Update Custom CSS."', 'sccss' ) ?></li>
 					<li><?php _e( 'Enjoy your new CSS styles!', 'sccss' ) ?></li>
