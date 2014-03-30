@@ -18,6 +18,7 @@ An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin an
 - Useful Code Syntax Highlighter
 - Checkbox to "Allow Double Quotes" no longer needed
 - Plugin attribution block removed
+- Allows Administrator access on Multisite
 
 **Features**
 - No configuration needed
@@ -87,6 +88,7 @@ Please check your CSS at the [W3C CSS Validation Service](http://jigsaw.w3.org/c
 * Added Sytnax Highlighter
 * Removed Need for "Allow Quotation Marks" checkbox
 * Removed plugin attribution text
+* Allow Administrator access on multisite
 * Minor styling changes.  Thanks @kucrut!
 
 = 2.5 =
