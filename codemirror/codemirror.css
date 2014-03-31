@@ -4,7 +4,7 @@
     /* Set height, width, borders, and global font properties here */
     font-family: 'Consolas', 'Monaco', monospace;
     height: 100%;
-    min-height: 100px;
+    min-height: 60px;
     border: 1px solid #ddd;
     background: #f9f9f9;
     max-width: 831px;
