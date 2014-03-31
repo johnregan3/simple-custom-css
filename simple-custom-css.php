@@ -5,7 +5,7 @@
  * Description: The simple, solid way to add custom CSS to your WordPress website. Simple Custom CSS allows you to add your own styles or override the default CSS of a plugin or theme.</p>
  * Author: John Regan
  * Author URI: http://johnregan3.me
- * Version: 2.5
+ * Version: 3.0
  * Text Domain: sccss
  *
  * Copyright 2014  John Regan  (email : john@johnregan3.com)
@@ -25,7 +25,7 @@
  *
  * @package SCCSS
  * @author John Regan
- * @version 2.5
+ * @version 3.0
  */
 
 
@@ -92,6 +92,24 @@ function sccss_register_style() {
 }
 
 add_action( 'wp_enqueue_scripts', 'sccss_register_style', 99 );
+
+
+/**
+ * Enqueues Scripts/Styles for Syntax Highlighter
+ *
+ * @since  3.0
+ * @param  string  Hook of admin screen
+ * @return void
+ */
+function sccss_register_codemirror( $hook ) {
+	if ( "appearance_page_simple-custom-css" == $hook ) {
+		wp_enqueue_style( 'codemirror-css', plugins_url( 'simple-custom-css/codemirror/codemirror.css' ) );
+		wp_enqueue_script( 'codemirror-js', plugins_url( 'simple-custom-css/codemirror/codemirror.js' ), array(), '20140329', true );
+		wp_enqueue_script( 'codemirror-css-js', plugins_url( 'simple-custom-css/codemirror/css.js' ), array(), '20140329', true );
+	}
+}
+add_action( 'admin_enqueue_scripts', 'sccss_register_codemirror' );
+
 
 /**
  * Add Query Var Stylesheet trigger
@@ -225,6 +243,11 @@ function sccss_render_submenu_page() {
 				<?php do_action( 'sccss-form-bottom' ); ?>
 			</div>
 		</form>
+		<script language="javascript">
+			jQuery( document ).ready( function() {
+				var editor = CodeMirror.fromTextArea( document.getElementById( "sccss_settings[sccss-content]" ), {lineNumbers: true, lineWrapping: true} );
+			});
+		</script>
 	</div>
 	<?php
 }
