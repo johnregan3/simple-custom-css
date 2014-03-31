@@ -102,12 +102,13 @@ add_action( 'wp_enqueue_scripts', 'sccss_register_style', 99 );
  * @return void
  */
 function sccss_register_codemirror( $hook ) {
-	if ( "appearance_page_simple-custom-css" == $hook ) {
+	if ( 'appearance_page_simple-custom-css' == $hook ) {
 		wp_enqueue_style( 'codemirror-css', plugins_url( 'simple-custom-css/codemirror/codemirror.css' ) );
 		wp_enqueue_script( 'codemirror-js', plugins_url( 'simple-custom-css/codemirror/codemirror.js' ), array(), '20140329', true );
 		wp_enqueue_script( 'codemirror-css-js', plugins_url( 'simple-custom-css/codemirror/css.js' ), array(), '20140329', true );
 	}
 }
+
 add_action( 'admin_enqueue_scripts', 'sccss_register_codemirror' );
 
 
@@ -125,7 +126,7 @@ function sccss_add_trigger( $vars ) {
 	return $vars;
 }
 
-add_filter( 'query_vars','sccss_add_trigger' );
+add_filter( 'query_vars', 'sccss_add_trigger' );
 
 /**
  * If trigger (query var) is tripped, load our pseudo-stylesheet
@@ -138,11 +139,12 @@ function sccss_trigger_check() {
 	if ( intval( get_query_var( 'sccss' ) ) == 1 ) {
 		ob_start();
 		header( 'Content-type: text/css' );
-		$options = get_option( 'sccss_settings' );
+		$options     = get_option( 'sccss_settings' );
 		$raw_content = isset( $options['sccss-content'] ) ? $options['sccss-content'] : '';
 		$content     = wp_kses( $raw_content, array( '\'', '\"' ) );
 		$content     = str_replace( '&gt;', '>', $content );
-		echo $content;
+		echo $content; //xss okay
+		exit;
 		ob_clean();
 	}
 }
@@ -183,14 +185,14 @@ add_action( 'admin_init', 'sccss_register_settings' );
 function sccss_render_submenu_page() {
 
 	$options = get_option( 'sccss_settings' );
-	$content = isset( $options['sccss-content'] ) ? $options['sccss-content'] : '';
+	$content = isset( $options['sccss-content'] ) && ! empty( $options['sccss-content'] ) ? $options['sccss-content'] : '/* Enter Your Custom CSS Here */';
 
 	if ( isset( $_GET['settings-updated'] ) ) : ?>
-		<div id="message" class="updated"><p><?php _e( 'Custom CSS updated successfully.' ); ?></p></div>
+		<div id="message" class="updated"><p><?php _e( 'Custom CSS updated successfully.', 'sccss' ); ?></p></div>
 	<?php endif; ?>
 	<div class="wrap">
 		<h2 style="margin-bottom: 1em;"><?php _e( 'Simple Custom CSS', 'sccss' ); ?></h2>
-				<form name="sccss-form" action="options.php" method="post" enctype="multipart/form-data">
+		<form name="sccss-form" action="options.php" method="post" enctype="multipart/form-data">
 			<?php settings_fields( 'sccss_settings_group' ); ?>
 			<div id="templateside">
 				<?php do_action( 'sccss-sidebar-top' ); ?>
