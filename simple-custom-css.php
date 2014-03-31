@@ -44,10 +44,9 @@ function sccss_settings_link( $links ) {
 	array_unshift( $links, $settings_page );
 	return $links;
 }
-
 $plugin = plugin_basename( __FILE__ );
-
 add_filter( "plugin_action_links_$plugin", 'sccss_settings_link' );
+
 
 /**
  * Register text domain
@@ -57,7 +56,6 @@ add_filter( "plugin_action_links_$plugin", 'sccss_settings_link' );
 function sccss_textdomain() {
 	load_plugin_textdomain( 'sccss' );
 }
-
 add_action( 'init', 'sccss_textdomain' );
 
 
@@ -69,9 +67,7 @@ add_action( 'init', 'sccss_textdomain' );
 function sccss_uninstall() {
 	delete_option( 'sccss_settings' );
 }
-
 register_uninstall_hook( __FILE__, 'sccss_uninstall' );
-
 
 
 /**
@@ -90,7 +86,6 @@ function sccss_register_style() {
 	wp_register_style( 'sccss_style', home_url( '/?sccss=1' ) );
 	wp_enqueue_style( 'sccss_style' );
 }
-
 add_action( 'wp_enqueue_scripts', 'sccss_register_style', 99 );
 
 
@@ -108,7 +103,6 @@ function sccss_register_codemirror( $hook ) {
 		wp_enqueue_script( 'codemirror-css-js', plugins_url( 'simple-custom-css/codemirror/css.js' ), array(), '20140329', true );
 	}
 }
-
 add_action( 'admin_enqueue_scripts', 'sccss_register_codemirror' );
 
 
@@ -125,8 +119,8 @@ function sccss_add_trigger( $vars ) {
 	$vars[] = 'sccss';
 	return $vars;
 }
-
 add_filter( 'query_vars', 'sccss_add_trigger' );
+
 
 /**
  * If trigger (query var) is tripped, load our pseudo-stylesheet
@@ -148,9 +142,7 @@ function sccss_trigger_check() {
 		ob_clean();
 	}
 }
-
 add_action( 'template_redirect', 'sccss_trigger_check' );
-
 
 
 /**
@@ -161,7 +153,6 @@ add_action( 'template_redirect', 'sccss_trigger_check' );
 function sccss_register_submenu_page() {
 	add_theme_page( __( 'Simple Custom CSS', 'sccss' ), __( 'Custom CSS', 'sccss' ), 'edit_theme_options', basename( __FILE__ ), 'sccss_render_submenu_page' );
 }
-
 add_action( 'admin_menu', 'sccss_register_submenu_page' );
 
 
@@ -173,7 +164,6 @@ add_action( 'admin_menu', 'sccss_register_submenu_page' );
 function sccss_register_settings() {
 	register_setting( 'sccss_settings_group', 'sccss_settings' );
 }
-
 add_action( 'admin_init', 'sccss_register_settings' );
 
 
