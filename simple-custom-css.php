@@ -137,23 +137,17 @@ add_filter( 'query_vars','sccss_add_trigger' );
 function sccss_trigger_check() {
 	if ( intval( get_query_var( 'sccss' ) ) == 1 ) {
 		ob_start();
-			header( 'Content-type: text/css' );
-			$options = get_option( 'sccss_settings' );
-			if ( isset( $options['sccss-quotes'] ) ) {
-				$content = $options['sccss-content'];
-			} else {
-				$raw_content = isset( $options['sccss-content'] ) ? $options['sccss-content'] : '';
-				$esc_content = esc_html( $raw_content );
-				$content     = str_replace( '&gt;', '>', $esc_content );
-			}
-			if ( isset( $options['sccss-credit'] ) ) {
-echo "/*
- * Created by the Simple Custom CSS Plugin
- * http://wordpress.org/plugins/simple-custom-css/
- */\n\n";
-				}
-				echo $content;
-			exit;
+		header( 'Content-type: text/css' );
+		$options = get_option( 'sccss_settings' );
+		if ( isset( $options['sccss-quotes'] ) ) {
+			$content = $options['sccss-content'];
+		} else {
+			$raw_content = isset( $options['sccss-content'] ) ? $options['sccss-content'] : '';
+			$esc_content = esc_html( $raw_content );
+			$content     = str_replace( '&gt;', '>', $esc_content );
+		}
+		echo $content;
+		exit;
 		ob_clean();
 	}
 }
@@ -195,7 +189,6 @@ function sccss_render_submenu_page() {
 
 	$options = get_option( 'sccss_settings' );
 	$quotes  = isset( $options['sccss-quotes'] ) ? $options['sccss-quotes'] : '';
-	$credit  = isset( $options['sccss-credit'] ) ? 1 : 0 ;
 	$content = isset( $options['sccss-content'] ) ? $options['sccss-content'] : '';
 
 	if ( isset( $_GET['settings-updated'] ) ) : ?>
@@ -223,12 +216,6 @@ function sccss_render_submenu_page() {
 				<p>&nbsp;</p>
 				<h3><?php _e( 'Help', 'sccss' ) ?></h3>
 				<p><a href="<?php echo esc_url( 'https://github.com/johnregan3/simple-custom-css/wiki' ); ?>" ><?php _e( 'Simple Custom CSS Wiki', 'sccss' ); ?></a></p>
-				<p>&nbsp;</p>
-				<h3>Attribution</h3>
-				<p>
-					<input type="checkbox" name="sccss_settings[sccss-credit]" value="1" <?php checked( 1, $credit ); ?> />&nbsp;&nbsp;<?php _e( 'This Plugin is Really Helpful!', 'sccss' ) ?><br />
-					<span class="description"><?php _e( 'Print credit to the author within the CSS file. No text will appear on your website.', 'sccss' ); ?></span>
-				</p>
 				<?php do_action( 'sccss-sidebar-bottom' ); ?>
 			</div>
 			<div id="template">
