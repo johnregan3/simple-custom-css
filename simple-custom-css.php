@@ -189,21 +189,13 @@ function sccss_render_submenu_page() {
 		<div id="message" class="updated"><p><?php _e( 'Custom CSS updated successfully.' ); ?></p></div>
 	<?php endif; ?>
 	<div class="wrap">
-		<h2><?php _e( 'Simple Custom CSS', 'sccss' ); ?></h2>
-		<p><?php _e( 'Simple Custom CSS allows you to add your own styles or override the default CSS of a plugin or theme.', 'sccss' ) ?></p>
-		<form name="sccss-form" action="options.php" method="post" enctype="multipart/form-data">
+		<h2 style="margin-bottom: 1em;"><?php _e( 'Simple Custom CSS', 'sccss' ); ?></h2>
+				<form name="sccss-form" action="options.php" method="post" enctype="multipart/form-data">
 			<?php settings_fields( 'sccss_settings_group' ); ?>
 			<div id="templateside">
 				<?php do_action( 'sccss-sidebar-top' ); ?>
-				<h3><?php _e( 'Instructions', 'sccss' ) ?></h3>
-				<ol style="margin-left:1.5em">
-					<li><?php _e( 'Enter your custom CSS in the the texarea to the right.', 'sccss' ) ?></li>
-					<li><?php _e( 'Click "Update Custom CSS."', 'sccss' ) ?></li>
-					<li><?php _e( 'Enjoy your new CSS styles!', 'sccss' ) ?></li>
-				</ol>
-				<p>&nbsp;</p>
-				<h3><?php _e( 'Help', 'sccss' ) ?></h3>
-				<p><a href="<?php echo esc_url( 'https://github.com/johnregan3/simple-custom-css/wiki' ); ?>" ><?php _e( 'Simple Custom CSS Wiki', 'sccss' ); ?></a></p>
+				<p style="margin-top: 0"><?php _e( 'Simple Custom CSS allows you to add your own styles or override the default CSS of a plugin or theme.', 'sccss' ) ?></p>
+				<p><?php _e( 'To use, enter your custom CSS, then click "Update Custom CSS".  It\'s that simple!', 'sccss' ) ?></p>
 				<?php do_action( 'sccss-sidebar-bottom' ); ?>
 			</div>
 			<div id="template">
