@@ -137,18 +137,12 @@ add_filter( 'query_vars','sccss_add_trigger' );
 function sccss_trigger_check() {
 	if ( intval( get_query_var( 'sccss' ) ) == 1 ) {
 		ob_start();
-			header( 'Content-type: text/css' );
-			$options = get_option( 'sccss_settings' );
-			if ( isset( $options['sccss-credit'] ) ) {
-echo "/*
- * Created by the Simple Custom CSS Plugin
- * http://wordpress.org/plugins/simple-custom-css/
- */\n\n";
-				}
-				$raw_content = isset( $options['sccss-content'] ) ? $options['sccss-content'] : '';
-				$content     = wp_kses( $raw_content, array( '\'', '\"' ) );
-				$content     = str_replace( '&gt;', '>', $content );
-				echo $content;
+		header( 'Content-type: text/css' );
+		$options = get_option( 'sccss_settings' );
+		$raw_content = isset( $options['sccss-content'] ) ? $options['sccss-content'] : '';
+		$content     = wp_kses( $raw_content, array( '\'', '\"' ) );
+		$content     = str_replace( '&gt;', '>', $content );
+		echo $content;
 		ob_clean();
 	}
 }
