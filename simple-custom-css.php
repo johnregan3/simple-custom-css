@@ -157,7 +157,7 @@ add_action( 'template_redirect', 'sccss_trigger_check' );
  * @since 1.0
  */
 function sccss_register_submenu_page() {
-	add_theme_page( __( 'Simple Custom CSS', 'sccss' ), __( 'Custom CSS', 'sccss' ), 'manage_options', basename( __FILE__ ), 'sccss_render_submenu_page' );
+	add_theme_page( __( 'Simple Custom CSS', 'sccss' ), __( 'Custom CSS', 'sccss' ), 'edit_theme_options', basename( __FILE__ ), 'sccss_render_submenu_page' );
 }
 
 add_action( 'admin_menu', 'sccss_register_submenu_page' );
