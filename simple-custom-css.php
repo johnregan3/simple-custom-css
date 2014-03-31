@@ -196,7 +196,7 @@ function sccss_render_submenu_page() {
 	$options = get_option( 'sccss_settings' );
 	$quotes  = isset( $options['sccss-quotes'] ) ? $options['sccss-quotes'] : '';
 	$credit  = isset( $options['sccss-credit'] ) ? 1 : 0 ;
-	$content = isset( $options['sccss-content'] ) ? $options['sccss-content'] : '';
+	$content = isset( $options['sccss-content'] ) && ! empty( $options['sccss-content'] ) ? $options['sccss-content'] : '/* Enter Your Custom CSS Here */';
 
 	if ( isset( $_GET['settings-updated'] ) ) : ?>
 		<div id="message" class="updated"><p><?php _e( 'Custom CSS updated successfully.' ); ?></p></div>
