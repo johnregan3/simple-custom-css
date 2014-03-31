@@ -14,19 +14,19 @@ Add Custom CSS to your WordPress site without any hassles.
 
 An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin and Theme default styles. This plugin is designed to meet the needs of administrators who would like to add their own CSS to their WordPress website.
 
-**Now Allows Double Quotes in CSS Selectors!**
-
-**Now Supports Subdirectory Installs!**
+**New for Version 3.0**
+- Useful Code Syntax Highlighter
+- Checkbox to "Allow Double Quotes" no longer needed
+- Plugin attribution block removed
+- Allows Administrator access on Multisite
 
 **Features**
-
 - No configuration needed
 - Simple interface built on WordPress UI
 - Virtually no impact on site performance
 - No JavaScript files or complicated database queries
-- Generates no CSS files
-- Extremely lightweight (~7KB)
 - Thorough documentation
+- Active Plugin Support
 
 == Installation ==
 
@@ -84,6 +84,13 @@ Please check your CSS at the [W3C CSS Validation Service](http://jigsaw.w3.org/c
 
 == Changelog ==
 
+= 3.0 =
+* Added Sytnax Highlighter
+* Removed Need for "Allow Quotation Marks" checkbox
+* Removed plugin attribution text
+* Allow Administrator access on multisite
+* Minor styling changes.  Thanks @kucrut!
+
 = 2.5 =
 * Fixed issue with WP installs in subdirectories.  Thanks @lopo!
 * Tested for compatibility with WP 3.8.1
@@ -121,6 +128,9 @@ Instead of using print_scripts to insert the CSS directly into the HEAD, CSS sty
 * Inital Release
 
 == Upgrade Notice ==
+
+= 3.0 =
+Added new Syntax highlighter, removed attribution text and need for "Allow Quotation Marks" option.
 
 = 2.5 =
 Fixed issue with WP installs in subdirectories.  Thanks @lopo!
