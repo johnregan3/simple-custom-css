@@ -183,7 +183,6 @@ add_action( 'admin_init', 'sccss_register_settings' );
 function sccss_render_submenu_page() {
 
 	$options = get_option( 'sccss_settings' );
-	$credit  = isset( $options['sccss-credit'] ) ? 1 : 0 ;
 	$content = isset( $options['sccss-content'] ) ? $options['sccss-content'] : '';
 
 	if ( isset( $_GET['settings-updated'] ) ) : ?>
