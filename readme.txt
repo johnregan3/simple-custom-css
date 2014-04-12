@@ -17,12 +17,14 @@ An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin an
 **Now Even Simpler!**
 
 **New for Version 3.0**
+
 - Useful Code Syntax Highlighter
 - Checkbox to "Allow Double Quotes" no longer needed
 - Plugin attribution block removed
 - Allows Administrator access on Multisite
 
 **Features**
+
 - No configuration needed
 - Simple interface built on WordPress UI
 - Virtually no impact on site performance
