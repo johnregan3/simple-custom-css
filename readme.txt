@@ -28,7 +28,7 @@ An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin an
 - No configuration needed
 - Simple interface built on WordPress UI
 - Virtually no impact on site performance
-- No JavaScript files or complicated database queries
+- No complicated database queries
 - Thorough documentation
 - Active Plugin Support
 
