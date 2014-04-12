@@ -46,6 +46,14 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 
 == Frequently Asked Questions ==
 
+= My Sidebar Options are gone. Help! =
+
+Don't worry, in version 3.0 the sidebar options were removed to streamline the plugin and make it even more... simple.
+
+= Does Simple Custom CSS support using double quotes (")? =
+
+Yes! And you no longer need to click a checkbox to make it happen.
+
 Find more help at the [Simple Custom CSS Wiki](https://github.com/johnregan3/simple-custom-css/wiki "Simple Custom CSS Wiki")
 
 = Will this Plugin work on my WordPress.com website? =
