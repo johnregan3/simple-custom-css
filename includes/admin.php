@@ -21,7 +21,7 @@ function sccss_settings_link( $links ) {
 	return $links;
 }
 $plugin = plugin_basename( SCCSS_FILE );
-add_filter( "plugin_action_links_$plugin", 'sccss_settings_link' );
+add_filter( 'plugin_action_links_$plugin', 'sccss_settings_link' );
 
 
 /**
