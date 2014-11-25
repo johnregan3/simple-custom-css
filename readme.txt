@@ -16,7 +16,7 @@ An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin an
 
 **New in Version 3.2**
 
-- Improved architecture to reduce the number of queries (Thanks, dannyvankooten!)
+- Improved architecture to reduce the number of queries (Thanks, dvankooten!)
 
 **Features**
 
