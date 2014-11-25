@@ -1,5 +1,5 @@
 === Simple Custom CSS ===
-Contributors: johnregan3, dannyvankooten
+Contributors: johnregan3, dvankooten
 Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BAG2XC69ZYADQ
 Tags: css, styles, custom css, custom
 Requires at least: 3.0.1
