@@ -5,6 +5,7 @@ An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin an
 
 **New for Version 3.2.5**
 - Tested for compatibility with WP 4.3
+- Readme, Wiki, and FAQ now include instructions for SSL support
 
 **Features**
 - Active Plugin Support

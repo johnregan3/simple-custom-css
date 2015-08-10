@@ -93,7 +93,7 @@ add_action( 'admin_init', 'sccss_register_settings' );
 function sccss_render_submenu_page() {
 
 	$options = get_option( 'sccss_settings' );
-	$content = isset( $options['sccss-content'] ) && ! empty( $options['sccss-content'] ) ? $options['sccss-content'] : '/*' . __( 'Enter Your Custom CSS Below This Line */', 'sccss' ) . '*/';
+	$content = isset( $options['sccss-content'] ) && ! empty( $options['sccss-content'] ) ? $options['sccss-content'] : '/*' . __( 'Enter Your Custom CSS Below This Line', 'sccss' ) . '*/';
 
 	if ( isset( $_GET['settings-updated'] ) ) : ?>
 		<div id="message" class="updated"><p><?php _e( 'Custom CSS updated successfully.', 'sccss' ); ?></p></div>
@@ -129,3 +129,11 @@ function sccss_render_submenu_page() {
 	</div>
 <?php
 }
+
+function sccss_ssl_support_notice() {
+	echo '<p class="description">';
+	_e( 'If you would like to use Simple Custom CSS on your SSL site, please see the <a href="https://github.com/johnregan3/simple-custom-css/wiki/SSL-Support" target="_blank">instructions here</a>.', 'sccss' );
+	echo '</p>';
+}
+add_action( 'sccss-sidebar-bottom', 'sccss_ssl_support_notice' );
+
