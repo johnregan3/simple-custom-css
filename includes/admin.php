@@ -93,7 +93,7 @@ add_action( 'admin_init', 'sccss_register_settings' );
 function sccss_render_submenu_page() {
 
 	$options = get_option( 'sccss_settings' );
-	$content = isset( $options['sccss-content'] ) && ! empty( $options['sccss-content'] ) ? $options['sccss-content'] : '/* Enter Your Custom CSS Here */';
+	$content = isset( $options['sccss-content'] ) && ! empty( $options['sccss-content'] ) ? $options['sccss-content'] : __( '/* Enter Your Custom CSS Here */', 'sccss' );
 
 	if ( isset( $_GET['settings-updated'] ) ) : ?>
 		<div id="message" class="updated"><p><?php _e( 'Custom CSS updated successfully.', 'sccss' ); ?></p></div>
