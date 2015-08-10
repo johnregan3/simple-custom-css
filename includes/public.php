@@ -7,7 +7,7 @@ if( ! defined( 'SCCSS_FILE' ) ) {
 
 
 /**
- * Enqueue link to add CSS through PHP
+ * Enqueue link to add CSS through PHP.
  *
  * This is a typical WP Enqueue statement, except that the URL of the stylesheet is simply a query var.
  * This query var is passed to the URL, and when it is detected by scss_maybe_print_css(),
