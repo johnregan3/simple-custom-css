@@ -3,7 +3,7 @@ Contributors: johnregan3, dvankooten
 Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BAG2XC69ZYADQ
 Tags: css, styles, custom css, custom
 Requires at least: 3.0.1
-Tested up to: 4.1
+Tested up to: 4.3
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -16,7 +16,7 @@ An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin an
 
 **New in Version 3.2**
 
-- Improved architecture to reduce the number of queries (Thanks, dvankooten!)
+- Tested for compatibility with WP 4.3
 
 **Features**
 
@@ -83,9 +83,12 @@ Please check your CSS at the [W3C CSS Validation Service](http://jigsaw.w3.org/c
 
 == Changelog ==
 
+= 3.2.5 =
+* Tested for compatibility with WP 4.3
+
 = 3.2 =
 * Tested for compatibility with WP 4.1
-* Improved architecture to reduce the number of queries (Thanks, dannyvankooten!)
+* Improved architecture to reduce the number of queries (Thanks, @dannyvankooten!)
 
 = 3.0.1 =
 * Tested for compatibility with WP 3.9.1
@@ -132,9 +135,12 @@ Instead of using print_scripts to insert the CSS directly into the HEAD, CSS sty
 ...even though no css file is actually generated.  Please see the comments within the Plugin file for more detailed information.
 
 = 1.0 =
-* Inital Release
+* Initial Release
 
 == Upgrade Notice ==
+
+= 3.3 =
+Tested for compatibility with WP 4.3.
 
 = 3.2 =
 Tested for compatibility with WP 4.1.  Improved architecture to reduce the number of queries
@@ -164,4 +170,4 @@ Allowing the ">" direct child selector.
 Changed method for inserting CSS, added support for cleanup on deletion, other minor changes.
 
 = 1.0 =
-Inital Release
+Initial Release
