@@ -14,7 +14,14 @@ if( ! defined( 'SCCSS_FILE' ) ) {
  * it writes its PHP/CSS to the browser.
  */
 function sccss_register_style() {
-	wp_register_style( 'sccss_style', add_query_arg( array( 'sccss' => 1 ), home_url() ) );
+	$url = home_url();
+
+	if ( is_ssl() ) {
+		$url = home_url( '/', 'https' );
+	}
+
+	wp_register_style( 'sccss_style', add_query_arg( array( 'sccss' => 1 ), $url ) );
+
 	wp_enqueue_style( 'sccss_style' );
 }
 add_action( 'wp_enqueue_scripts', 'sccss_register_style', 99 );

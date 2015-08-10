@@ -17,21 +17,19 @@ An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin an
 **New in Version 3.2.5**
 
 - Tested for compatibility with WP 4.3
-- Readme, Wiki, and FAQ now include instructions for SSL support
+- New **SSL Support**!
 
 **Features**
 
 - Active Plugin Support
 - Useful Code Syntax Highlighter
+- Supports SSL-enabled sites
 - No configuration needed
 - Simple interface built on WordPress UI
 - Virtually no impact on site performance
 - No complicated database queries
 - Thorough documentation
 - Allows Administrator access on Multisite
-
-**SSL Support**
-If you would like to use Simple Custom CSS on your SSL site, please see the [instructions here](https://github.com/johnregan3/simple-custom-css/wiki/SSL-Support).
 
 == Installation ==
 
@@ -68,9 +66,10 @@ For instance, you may have:
 	a {
 		color: #f00;
 	}
+```
 
 When you need:
-
+```
 	#content a {
 		color: #f00;
 	}
@@ -82,22 +81,6 @@ The specificity you need depends upon the CSS rules you are attempting to overri
 
 Please check your CSS at the [W3C CSS Validation Service](http://jigsaw.w3.org/css-validator/#validate_by_input+with_options" "W3C CSS Validation Service").
 
-= How do I use this with my SSL enabled website? =
-
-First off, ***do not edit this plugin's styles!*** When you update the plugin to a new version, your changes will be lost.
-
-In your _theme_ files (or if you're using a customized personal plugin) add the following code:
-
-```
-function sccss_ssl_styles() {
- wp_deregister_style( 'sccss_style' );
- wp_dequeue_style( 'sccss_style' );
- wp_register_style( 'sccss_style', 'https://yourdomain.dom/?sccss=1' );
- wp_enqueue_style( 'sccss_style' );
-}
-add_action( 'wp_enqueue_scripts', 'sccss_ssl_styles', 99 );
-```
-
 == Screenshots ==
 
 1. The Simple Custom CSS Administration Screen
@@ -106,6 +89,7 @@ add_action( 'wp_enqueue_scripts', 'sccss_ssl_styles', 99 );
 
 = 3.2.5 =
 * Tested for compatibility with WP 4.3
+* Added documentation for SSL Support
 
 = 3.2 =
 * Tested for compatibility with WP 4.1
@@ -160,8 +144,9 @@ Instead of using print_scripts to insert the CSS directly into the HEAD, CSS sty
 
 == Upgrade Notice ==
 
-= 3.3 =
+= 3..2.5 =
 Tested for compatibility with WP 4.3.
+Added SSL support.
 
 = 3.2 =
 Tested for compatibility with WP 4.1.  Improved architecture to reduce the number of queries

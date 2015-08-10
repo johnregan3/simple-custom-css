@@ -5,11 +5,12 @@ An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin an
 
 **New for Version 3.2.5**
 - Tested for compatibility with WP 4.3
-- Readme, Wiki, and FAQ now include instructions for SSL support
+- New **SSL Support**!
 
 **Features**
 - Active Plugin Support
 - Useful Code Syntax Highlighter
+- Supports SSL-enabled sites
 - No configuration needed
 - Simple interface built on WordPress UI
 - Virtually no impact on site performance
@@ -57,7 +58,9 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 
 *** 3.2.5 ***
 * Tested for compatibility with WP 4.3
+* Added SSL Support
 * Localization (Thanks @ThomasDK81!)
+
 
 *** 3.2 ***
 * Tested for compatibility with WP 4.1

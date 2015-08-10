@@ -131,17 +131,3 @@ function sccss_render_submenu_page() {
 }
 
 
-/**
- * Render SSL Support Instructions.
- *
- * @action scss-sidebar-bottom
- *
- * @since 3.2.5
- */
-function sccss_ssl_support_notice() {
-	echo '<p class="description">';
-	_e( 'If you would like to use Simple Custom CSS on your SSL site, please see the <a href="https://github.com/johnregan3/simple-custom-css/wiki/SSL-Support" target="_blank">instructions here</a>.', 'sccss' );
-	echo '</p>';
-}
-add_action( 'sccss-sidebar-bottom', 'sccss_ssl_support_notice' );
-
