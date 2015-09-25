@@ -30,7 +30,7 @@ add_filter( 'plugin_action_links_$plugin', 'sccss_settings_link' );
 * @since 1.0
 */
 function sccss_textdomain() {
-	load_plugin_textdomain( 'sccss' );
+	load_plugin_textdomain( 'simple-custom-css' );
 }
 add_action( 'init', 'sccss_textdomain' );
 
@@ -69,7 +69,7 @@ add_action( 'admin_enqueue_scripts', 'sccss_register_codemirror' );
  * @since 1.0
  */
 function sccss_register_submenu_page() {
-	add_theme_page( __( 'Simple Custom CSS', 'sccss' ), __( 'Custom CSS', 'sccss' ), 'edit_theme_options', basename( SCCSS_FILE ), 'sccss_render_submenu_page' );
+	add_theme_page( __( 'Simple Custom CSS', 'simple-custom-css' ), __( 'Custom CSS', 'simple-custom-css' ), 'edit_theme_options', basename( SCCSS_FILE ), 'sccss_render_submenu_page' );
 }
 add_action( 'admin_menu', 'sccss_register_submenu_page' );
 
@@ -93,20 +93,20 @@ add_action( 'admin_init', 'sccss_register_settings' );
 function sccss_render_submenu_page() {
 
 	$options = get_option( 'sccss_settings' );
-	$content = isset( $options['sccss-content'] ) && ! empty( $options['sccss-content'] ) ? $options['sccss-content'] : '/*' . __( 'Enter Your Custom CSS Below This Line', 'sccss' ) . '*/';
+	$content = isset( $options['sccss-content'] ) && ! empty( $options['sccss-content'] ) ? $options['sccss-content'] : '/*' . __( 'Enter Your Custom CSS Below This Line', 'simple-custom-css' ) . '*/';
 
 	if ( isset( $_GET['settings-updated'] ) ) : ?>
-		<div id="message" class="updated"><p><?php _e( 'Custom CSS updated successfully.', 'sccss' ); ?></p></div>
+		<div id="message" class="updated"><p><?php _e( 'Custom CSS updated successfully.', 'simple-custom-css' ); ?></p></div>
 	<?php endif; ?>
 	<div class="wrap">
-		<h2 style="margin-bottom: 1em;"><?php _e( 'Simple Custom CSS', 'sccss' ); ?></h2>
+		<h2 style="margin-bottom: 1em;"><?php _e( 'Simple Custom CSS', 'simple-custom-css' ); ?></h2>
 		<form name="sccss-form" action="options.php" method="post" enctype="multipart/form-data">
 			<?php settings_fields( 'sccss_settings_group' ); ?>
 			<div id="templateside">
 				<?php do_action( 'sccss-sidebar-top' ); ?>
-				<p style="margin-top: 0"><?php _e( 'Simple Custom CSS allows you to add your own styles or override the default CSS of a plugin or theme.', 'sccss' ) ?></p>
-				<p><?php _e( 'To use, enter your custom CSS, then click "Update Custom CSS".  It\'s that simple!', 'sccss' ) ?></p>
-				<?php submit_button( __( 'Update Custom CSS', 'sccss' ), 'primary', 'submit', true ); ?>
+				<p style="margin-top: 0"><?php _e( 'Simple Custom CSS allows you to add your own styles or override the default CSS of a plugin or theme.', 'simple-custom-css' ) ?></p>
+				<p><?php _e( 'To use, enter your custom CSS, then click "Update Custom CSS".  It\'s that simple!', 'simple-custom-css' ) ?></p>
+				<?php submit_button( __( 'Update Custom CSS', 'simple-custom-css' ), 'primary', 'submit', true ); ?>
 				<?php do_action( 'sccss-sidebar-bottom' ); ?>
 			</div>
 			<div id="template">
@@ -116,7 +116,7 @@ function sccss_render_submenu_page() {
 				</div>
 				<?php do_action( 'sccss-textarea-bottom' ); ?>
 				<div>
-					<?php submit_button( __( 'Update Custom CSS', 'sccss' ), 'primary', 'submit', true ); ?>
+					<?php submit_button( __( 'Update Custom CSS', 'simple-custom-css' ), 'primary', 'submit', true ); ?>
 				</div>
 				<?php do_action( 'sccss-form-bottom' ); ?>
 			</div>

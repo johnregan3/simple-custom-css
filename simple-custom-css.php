@@ -6,9 +6,9 @@
  * Author: John Regan, Danny Van Kooten
  * Author URI: http://johnregan3.me
  * Version: 3.2.5
- * Text Domain: sccss
+ * Text Domain: simple-custom-css
  *
- * Copyright 2014  John Regan  (email : john@johnregan3.com)
+ * Copyright 2015  John Regan  (email : john@johnregan3.com)
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2, as
