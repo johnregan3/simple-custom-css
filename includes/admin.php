@@ -69,7 +69,7 @@ add_action( 'admin_enqueue_scripts', 'sccss_register_codemirror' );
  * @since 1.0
  */
 function sccss_register_submenu_page() {
-	add_theme_page( __( 'Simple Custom CSS', 'sccss' ), __( 'Custom CSS', 'sccss' ), 'edit_theme_options', basename( SCCSS_FILE ), 'sccss_render_submenu_page' );
+	add_theme_page( __( 'Simple Custom CSS', 'sccss' ), __( 'Custom CSS', 'sccss' ), apply_filters( 'sccss_capability', 'edit_theme_options' ), basename( SCCSS_FILE ), 'sccss_render_submenu_page' );
 }
 add_action( 'admin_menu', 'sccss_register_submenu_page' );
 
@@ -83,6 +83,15 @@ function sccss_register_settings() {
 	register_setting( 'sccss_settings_group', 'sccss_settings' );
 }
 add_action( 'admin_init', 'sccss_register_settings' );
+
+
+/**
+ * Filter settings capability
+ */
+function sccss_filter_capability() {
+	return apply_filters( 'sccss_capability', 'edit_theme_options' );
+}
+add_filter( 'option_page_capability_sccss_settings_group', 'sccss_filter_capability' );
 
 
 /**
