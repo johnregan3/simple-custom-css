@@ -45,6 +45,8 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 
 5. Click Activate Plugin to activate it.
 
+6. Begin using the plugin by going to Appearance > Custom CSS in the Admin Menu.
+
 [More help installing Plugins](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins "WordPress Codex: Installing Plugins")
 
 == Frequently Asked Questions ==
