@@ -17,6 +17,7 @@ An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin an
 **New in Version 3.3**
 
 - Added support for https://
+- Added base support for Danish language.  Thanks @ThomasDK81!
 - Tested for compatibility with WP version 4.4.1
 
 **Features**
@@ -86,6 +87,7 @@ Please check your CSS at the [W3C CSS Validation Service](http://jigsaw.w3.org/c
 
 = 3.3 =
 * Added support for https://
+* Added base support for Danish language.  Thanks @ThomasDK81!
 * Tested for compatibility with WP version 4.4.1
 
 = 3.2 =
@@ -140,6 +142,9 @@ Instead of using print_scripts to insert the CSS directly into the HEAD, CSS sty
 * Inital Release
 
 == Upgrade Notice ==
+
+= 3.3 =
+Tested for compatibility with WP 4.4.1.  Added support for http://.
 
 = 3.2 =
 Tested for compatibility with WP 4.1.  Improved architecture to reduce the number of queries

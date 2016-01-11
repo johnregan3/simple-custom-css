@@ -32,9 +32,9 @@ add_filter( 'plugin_action_links_' . plugin_basename( SCCSS_FILE ), 'sccss_setti
 * @since 1.0
 */
 function sccss_textdomain() {
-	load_plugin_textdomain( 'simple-custom-css' );
+	load_plugin_textdomain( 'simple-custom-css', false, dirname( plugin_basename( SCCSS_FILE ) ) . '/languages/' );
 }
-add_action( 'init', 'sccss_textdomain' );
+add_action( 'plugins_loaded', 'sccss_textdomain' );
 
 
 /**

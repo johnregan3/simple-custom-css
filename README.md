@@ -5,6 +5,7 @@ An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin an
 
 **New for Version 3.3**
 - Added support for https://
+- Added base support for Danish language.  Thanks @ThomasDK81!
 - Tested for compatibility with WP version 4.4.1
 
 **Features**
@@ -57,6 +58,7 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 
 *** 3.3 ***
 * Added support for https://
+* Added base support for Danish language.  Thanks @ThomasDK81!
 * Tested for compatibility with WP version 4.4.1
 
 *** 3.2 ***
