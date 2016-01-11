@@ -16,12 +16,14 @@ if( ! defined( 'SCCSS_FILE' ) ) {
 * @return array        Array of links to be output on Plugin Admin page.
 */
 function sccss_settings_link( $links ) {
-	$settings_page = '<a href="' . admin_url( 'themes.php?page=simple-custom-css.php' ) .'">Settings</a>';
-	array_unshift( $links, $settings_page );
-	return $links;
+	return array_merge(
+		array(
+			'settings' => '<a href="' . admin_url( 'themes.php?page=simple-custom-css.php' ) . '">' . __( 'Add CSS', 'sccss' ) . '</a>'
+		),
+		$links
+	);
 }
-$plugin = plugin_basename( SCCSS_FILE );
-add_filter( 'plugin_action_links_$plugin', 'sccss_settings_link' );
+add_filter( 'plugin_action_links_' . plugin_basename( SCCSS_FILE ), 'sccss_settings_link' );
 
 
 /**
@@ -30,9 +32,9 @@ add_filter( 'plugin_action_links_$plugin', 'sccss_settings_link' );
 * @since 1.0
 */
 function sccss_textdomain() {
-	load_plugin_textdomain( 'sccss' );
+	load_plugin_textdomain( 'sccss', false, dirname( plugin_basename( SCCSS_FILE ) ) );
 }
-add_action( 'init', 'sccss_textdomain' );
+add_action( 'plugins_loaded', 'sccss_textdomain' );
 
 
 /**
