@@ -40,17 +40,13 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 
 ### Use
 
-1.  [Download Simple Custom CSS](http://wordpress.org/plugins/simple-custom-css "Simple Custom CSS") from WordPress.org.
+1.  Navigate to Appearance > Custom CSS in the Admin Menu.
 
-2.  Unzip the .zip file.
+2.  Enter in valid CSS styles
 
-3.  Upload the Plugin folder (simple-custom-css/) to the wp-content/plugins folder.
+3.  Click "Update Custom CSS"
 
-4. Go to [Plugins Admin Panel](http://codex.wordpress.org/Administration_Panels#Plugins "Plugins Admin Panel") and find the newly uploaded Plugin, "Simple Custom CSS" in the list.
-
-5. Click Activate Plugin to activate it.
-
-6. Begin using the plugin by going to Appearance > Custom CSS in the Admin Menu.
+4.  View your changes in the Front End of your website
 
 
 ### Help
