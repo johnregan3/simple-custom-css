@@ -3,7 +3,7 @@ Contributors: johnregan3, dvankooten
 Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BAG2XC69ZYADQ
 Tags: css, styles, custom css, custom
 Requires at least: 3.0.1
-Tested up to: 4.1
+Tested up to: 4.4.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -14,9 +14,10 @@ Add Custom CSS to your WordPress site without any hassles.
 
 An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin and Theme default styles. This plugin is designed to meet the needs of administrators who would like to add their own CSS to their WordPress website.
 
-**New in Version 3.2**
+**New in Version 3.3**
 
-- Improved architecture to reduce the number of queries (Thanks, dvankooten!)
+- Added support for https://
+- Tested for compatibility with WP version 4.4.1
 
 **Features**
 
@@ -83,9 +84,13 @@ Please check your CSS at the [W3C CSS Validation Service](http://jigsaw.w3.org/c
 
 == Changelog ==
 
+= 3.3 =
+* Added support for https://
+* Tested for compatibility with WP version 4.4.1
+
 = 3.2 =
 * Tested for compatibility with WP 4.1
-* Improved architecture to reduce the number of queries (Thanks, dannyvankooten!)
+* Improved architecture to reduce the number of queries (Thanks, @dvankooten!)
 
 = 3.0.1 =
 * Tested for compatibility with WP 3.9.1

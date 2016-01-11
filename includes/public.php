@@ -5,20 +5,25 @@ if( ! defined( 'SCCSS_FILE' ) ) {
 	die();
 }
 
-
 /**
- * Enqueue link to add CSS through PHP
+ * Enqueue link to add CSS through PHP.
  *
  * This is a typical WP Enqueue statement, except that the URL of the stylesheet is simply a query var.
  * This query var is passed to the URL, and when it is detected by scss_maybe_print_css(),
  * it writes its PHP/CSS to the browser.
  */
 function sccss_register_style() {
-	wp_register_style( 'sccss_style', add_query_arg( array( 'sccss' => 1 ), home_url() ) );
+	$url = home_url();
+
+	if ( is_ssl() ) {
+		$url = home_url( '/', 'https' );
+	}
+
+	wp_register_style( 'sccss_style', add_query_arg( array( 'sccss' => 1 ), $url ) );
+
 	wp_enqueue_style( 'sccss_style' );
 }
 add_action( 'wp_enqueue_scripts', 'sccss_register_style', 99 );
-
 
 /**
  * If the query var is set, print the Simple Custom CSS rules.
