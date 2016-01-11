@@ -5,8 +5,8 @@
  * Description: The simple, solid way to add custom CSS to your WordPress website. Simple Custom CSS allows you to add your own styles or override the default CSS of a plugin or theme.
  * Author: John Regan, Danny Van Kooten
  * Author URI: http://johnregan3.me
- * Version: 3.2
- * Text Domain: sccss
+ * Version: 3.3
+ * Text Domain: simple-custom-css
  *
  * Copyright 2014  John Regan  (email : john@johnregan3.com)
  *
