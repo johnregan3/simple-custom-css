@@ -1,0 +1,22 @@
+{
+  "name": "simple-custom-css",
+  "version": "3.5.0",
+  "description": "The Simple Custom CSS Plugin.",
+  "main": "simple-custom-css.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnregan3/simple-custom-css.git"
+  },
+  "author": "johnregan3",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/johnregan3/simple-custom-css/issues"
+  },
+  "homepage": "https://github.com/johnregan3/simple-custom-css#readme",
+  "devDependencies": {
+    "eslint": "^3.2.2"
+  }
+}
