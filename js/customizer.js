@@ -1,4 +1,4 @@
-/* globals wp, jQuery, CodeMirror _simpleCustomCSSCustomizerExports */
+/* globals wp, jQuery, CodeMirror, _simpleCustomCSSCustomizerExports */
 /* exported simpleCustomCSSCustomizer */
 var simpleCustomCSSCustomizer = ( function( api, $ ) {
 	var self = {
