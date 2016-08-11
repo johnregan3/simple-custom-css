@@ -46,6 +46,18 @@ class Customizer {
 	public static $instance;
 
 	/**
+	 * Customizer constructor.
+	 *
+	 * @since 3.5
+	 */
+	function __construct() {
+		self::$instance = $this;
+		$this->setting_name = Admin::OPTION . '[' . Admin::SETTING_CONTENT . ']';
+		add_action( 'customize_register', array( $this, 'customize_register' ) );
+		add_action( 'customize_controls_enqueue_scripts', array( $this, 'customizer_scripts' ) );
+	}
+
+	/**
 	 * Get the instance.
 	 *
 	 * @since 3.5
@@ -57,17 +69,6 @@ class Customizer {
 			self::$instance = new self;
 		}
 		return self::$instance;
-	}
-
-	/**
-	 * Customizer constructor.
-	 *
-	 * @since 3.5
-	 */
-	function __construct() {
-		$this->setting_name = Admin::OPTION . '[' . Admin::SETTING_CONTENT . ']';
-		add_action( 'customize_register', array( $this, 'customize_register' ) );
-		add_action( 'customize_controls_enqueue_scripts', array( $this, 'customizer_scripts' ) );
 	}
 
 	/**

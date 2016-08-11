@@ -54,20 +54,6 @@ class Admin {
 	public static $instance;
 
 	/**
-	 * Get the instance
-	 *
-	 * @since 3.5
-	 *
-	 * @return Admin|object
-	 */
-	public static function get_instance() {
-		if ( ! isset( self::$instance ) ) {
-			self::$instance = new self;
-		}
-		return self::$instance;
-	}
-
-	/**
 	 * Admin constructor
 	 *
 	 * @since 3.5
@@ -89,6 +75,20 @@ class Admin {
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 		add_action( 'admin_menu', array( $this, 'register_submenu_page' ) );
 		add_action( 'admin_init', array( $this, 'register_settings' ) );
+	}
+
+	/**
+	 * Get the instance
+	 *
+	 * @since 3.5
+	 *
+	 * @return Admin|object
+	 */
+	public static function get_instance() {
+		if ( ! isset( self::$instance ) ) {
+			self::$instance = new self;
+		}
+		return self::$instance;
 	}
 
 	/**

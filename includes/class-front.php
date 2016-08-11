@@ -33,6 +33,18 @@ class Front {
 	public static $instance;
 
 	/**
+	 * Front constructor
+	 *
+	 * @since 3.5
+	 */
+	function __construct() {
+		self::$instance = $this;
+		add_action( 'wp_enqueue_scripts', array( $this, 'register_style' ), 99 );
+		add_action( 'wp_head', array( $this, 'preview_styles' ), 99 );
+		add_action( 'plugins_loaded', array( $this, 'maybe_print_css' ) );
+	}
+
+	/**
 	 * Get the instance.
 	 *
 	 * @return AMP|object
@@ -42,17 +54,6 @@ class Front {
 			self::$instance = new self;
 		}
 		return self::$instance;
-	}
-
-	/**
-	 * Front constructor
-	 *
-	 * @since 3.5
-	 */
-	function __construct() {
-		add_action( 'wp_enqueue_scripts', array( $this, 'register_style' ), 99 );
-		add_action( 'wp_head', array( $this, 'preview_styles' ), 99 );
-		add_action( 'plugins_loaded', array( $this, 'maybe_print_css' ) );
 	}
 
 	/**
