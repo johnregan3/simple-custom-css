@@ -1,10 +1,11 @@
-/* globals wp, jQuery, CodeMirror, _simpleCustomCSSCustomizerExports */
+/* globals wp, UIEvent, jQuery, CodeMirror, _simpleCustomCSSCustomizerExports */
 /* exported simpleCustomCSSCustomizer */
 var simpleCustomCSSCustomizer = ( function( api, $ ) {
+	'use strict';
+
 	var self = {
 		editor: {},
 		textarea: {},
-		section: '',
 		control: '',
 		element: ''
 	};
@@ -21,23 +22,27 @@ var simpleCustomCSSCustomizer = ( function( api, $ ) {
 
 			// When our Customizer section is expanded, load CodeMirror.
 			api.section( control.section() ).container.on( 'expanded', function() {
-				self.textarea = document.getElementById( self.element );
-				self.editor = CodeMirror.fromTextArea(
-					self.textarea,
-					{
-						lineNumbers: false,
-						lineWrapping: true
-					}
-				);
-				self.editor.on( 'change', function( cm ) {
-					var editorVal, changeEvent;
-					editorVal = cm.getValue();
-					self.textarea.value = editorVal;
-
-					changeEvent = new UIEvent( 'change' );
-					self.textarea.dispatchEvent( changeEvent );
-				});
+				self.loadCustomizer();
 			});
+		});
+	};
+
+	self.loadCustomizer = function() {
+		self.textarea = document.getElementById( self.element );
+		self.editor = CodeMirror.fromTextArea(
+			self.textarea,
+			{
+				lineNumbers: false,
+				lineWrapping: true
+			}
+		);
+		self.editor.on( 'change', function( cm ) {
+			var editorVal, changeEvent;
+			editorVal = cm.getValue();
+			self.textarea.value = editorVal;
+
+			changeEvent = new UIEvent( 'change' );
+			self.textarea.dispatchEvent( changeEvent );
 		});
 	};
 

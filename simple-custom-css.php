@@ -30,6 +30,8 @@
  * @version 3.5
  */
 
+namespace SimpleCustomCSS;
+
 // Prevent direct file access
 if( ! defined( 'ABSPATH' ) ) {
 	die();
@@ -37,19 +39,19 @@ if( ! defined( 'ABSPATH' ) ) {
 
 define( 'SCCSS_FILE', __FILE__ );
 
-require_once dirname( SCCSS_FILE ) . '/includes/front.php';
-require_once dirname( SCCSS_FILE ) . '/includes/admin.php';
-require_once dirname( SCCSS_FILE ) . '/includes/customizer.php';
 
-add_action( 'after_setup_theme', 'sccss_load' );
+require_once dirname( SCCSS_FILE ) . '/includes/class-customizer.php';
+require_once dirname( SCCSS_FILE ) . '/includes/class-admin.php';
+require_once dirname( SCCSS_FILE ) . '/includes/class-front.php';
 
-function sccss_load() {
-	if ( ! is_admin() ) {
-		$sccss_public = SimpleCustomCSS\Front::get_instance();
-	}
-	if ( ! defined( 'DOING_AJAX' ) ) {
-		$sccss_admin = SimpleCustomCSS\Admin::get_instance();
-	}
-	$sccss_customizer = SimpleCustomCSS\Customizer::get_instance();
+
+if ( ! is_admin() ) {
+	$sccss_public = Front::get_instance();
+} else if ( ! defined( 'DOING_AJAX' ) ) {
+	$sccss_admin = Admin::get_instance();
 }
+$sccss_customizer = Customizer::get_instance();
+
+
+
 

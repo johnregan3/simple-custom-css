@@ -14,12 +14,15 @@ if ( ! defined( 'SCCSS_FILE' ) ) {
 	die();
 }
 
+// Load our custom control at the appropriate time.
 add_action( 'customize_register',  __NAMESPACE__ . '\\customizer_register_callback' );
 
 /**
  * Class Customizer
  *
  * @package SimpleCustomCSS
+ *
+ * @since 3.5
  */
 class Customizer {
 
@@ -45,6 +48,8 @@ class Customizer {
 	/**
 	 * Get the instance.
 	 *
+	 * @since 3.5
+	 *
 	 * @return Customizer|object
 	 */
 	public static function get_instance() {
@@ -56,6 +61,8 @@ class Customizer {
 
 	/**
 	 * Customizer constructor.
+	 *
+	 * @since 3.5
 	 */
 	function __construct() {
 		$this->setting_name = Admin::OPTION . '[' . Admin::SETTING_CONTENT . ']';
@@ -124,12 +131,10 @@ class Customizer {
 		<script type="text/javascript">
 			( function( $ ) {
 				wp.customize( <?php echo wp_json_encode( $this->setting_name ); ?>, function( value ) {
-					var head = $( 'head' ), style;
-					style = $( document.createElement('style') ).attr( 'type', 'text/css' );
+					var style = $( '#sccss-preview' );
 					value.bind(function(to) {
-						style.append( to ? to : '' );
+						style.html( to ? to : '' );
 					});
-					head.append( style );
 				});
 			} )( jQuery )
 		</script>
@@ -175,11 +180,15 @@ class Customizer {
 /**
  * Load our custom control
  *
+ * @since 3.5
+ *
  * @action customize_register
  */
 function customizer_register_callback() {
 	/**
 	 * Class Textarea
+	 *
+	 * @since 3.5
 	 *
 	 * @package SimpleCustomCSS
 	 */
