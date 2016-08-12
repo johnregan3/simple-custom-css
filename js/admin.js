@@ -1,4 +1,4 @@
-/* globals jQuery */
+/* globals jQuery, CodeMirror */
 ( function( $ ) {
 	$( document ).ready( function() {
 		var textarea, editor;
