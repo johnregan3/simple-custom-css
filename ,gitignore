@@ -1,0 +1,71 @@
+# -----------------------------------------------------------------
+# .gitignore for WordPress
+# Bare Minimum Git
+# http://ironco.de/bare-minimum-git/
+# ver 20150227
+#
+# This file is tailored for a WordPress project
+# using the default directory structure
+#
+# This file specifies intentionally untracked files to ignore
+# http://git-scm.com/docs/gitignore
+#
+# NOTES:
+# The purpose of gitignore files is to ensure that certain files not
+# tracked by Git remain untracked.
+#
+# To ignore uncommitted changes in a file that is already tracked,
+# use `git update-index --assume-unchanged`.
+#
+# To stop tracking a file that is currently tracked,
+# use `git rm --cached`
+#
+# Change Log:
+# 20150227 Ignore hello.php plugin. props @damienfa
+# 20150227 Change theme ignore to wildcard twenty*. props @Z33
+# 20140606 Add .editorconfig as a tracked file
+# 20140404 Ignore database, compiled, and packaged files
+# 20140404 Header Information Updated
+# 20140402 Initially Published
+#
+# -----------------------------------------------------------------
+
+
+# ignore all files starting with .
+.*
+
+# ignore all files that start with ~
+~*
+
+# ignore OS generated files
+ehthumbs.db
+Thumbs.db
+
+# ignore Editor files
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
