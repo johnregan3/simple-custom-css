@@ -147,8 +147,9 @@ function sccss_render_submenu_page() {
 
 				<?php if ( ! version_compare( $wp_version, 4.9 ) >= 0 ) : ?>
 					<p class="description">
-						<?php // translators: Placeholder represents the URL to the Customizer Section. ?>
-						<?php echo wp_kses_post( sprintf( __( 'Did you know that you can edit Simple Custom CSS in <a href="%s" title="Simple Custom CSS in the Customizer">the Customizer</a>?', 'simple-custom-css' ), esc_url( wp_customize_url() . '?autofocus[control]=sccss_editor' ) ) ); ?>
+						<?php // translators: Placeholder represents the URL to the Customizer Section.
+						echo wp_kses_post( sprintf( __( 'Did you know that you can edit Simple Custom CSS in <a href="%s" title="Simple Custom CSS in the Customizer">the Customizer</a>?', 'simple-custom-css' ), esc_url( wp_customize_url() . '?autofocus[control]=sccss_editor' ) ) );
+						?>
 					</p>
 				<?php endif; ?>
 
