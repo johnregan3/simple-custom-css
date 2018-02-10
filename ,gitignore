@@ -34,6 +34,8 @@
 # ignore all files starting with .
 .*
 
+!/.gitignore
+
 # ignore all files that start with ~
 ~*
 
