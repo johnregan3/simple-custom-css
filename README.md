@@ -1,15 +1,17 @@
 Simple Custom CSS Plugin
 =================
 
-An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin and Theme default styles. This plugin is designed to meet the needs of administrators who would like to add their own CSS to their WordPress website.
+An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin and Theme default styles. This plugin is designed to meet the needs of administrators who would like to add their own CSS to their WordPress website.  Styles created with this plugin will render even if the theme is changed.
 
-**New for Version 3.3**
-- Added support for https://
-- Added base support for Danish language.  Thanks @ThomasDK81!
-- Tested for compatibility with WP version 4.4.1
+**New in Version 4.0**
+
+- Customizer Control (finally!)
+- Tested for WP version 4.9.4
+- Code linting (error checking) on the settings page
 
 **Features**
-- Active Plugin Support
+
+- Customizer Control
 - Useful Code Syntax Highlighter
 - No configuration needed
 - Simple interface built on WordPress UI
@@ -34,9 +36,13 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 
 [More help installing Plugins](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins "WordPress Codex: Installing Plugins")
 
-### Screenshot
+### Screenshots
 
+***Settings Page***
 <img src="https://raw.githubusercontent.com/johnregan3/simple-custom-css/master/assets/screenshot-1.png" width="700px" />
+
+***Customizer Section***
+<img src="https://raw.githubusercontent.com/johnregan3/simple-custom-css/master/assets/screenshot-2.png" width="700px" />
 
 ### Use
 
@@ -57,12 +63,20 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 
 ###Changelog
 
-*** 3.3 ***
+***4.0***
+* New Customizer Control (still compatible with older WP versions)
+* Added colors and linting to the Settings Page
+* Updated hooks to replace hyphens with underscores
+* Tested for WPCS compliance
+* Tested for compatibility with WP version 4.9.4
+
+
+***3.3***
 * Added support for https://
 * Added base support for Danish language.  Thanks @ThomasDK81!
 * Tested for compatibility with WP version 4.4.1
 
-*** 3.2 ***
+***3.2***
 * Tested for compatibility with WP 4.1
 * Improved architecture to reduce the number of queries.  Thanks @dannyvankooten!
 
