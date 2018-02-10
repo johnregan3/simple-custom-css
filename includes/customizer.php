@@ -85,7 +85,15 @@ function sccss_customizer_css() {
 
 add_action( 'wp_head', 'sccss_customizer_css', 99 );
 
-function sccss_customizer_styles() { ?>
+/**
+ * Add custom styles to the Customizer Editor Control.
+ *
+ * @since 4.0
+ *
+ * @action customize_controls_print_styles
+ */
+function sccss_customizer_styles() {
+	?>
 	<style>
 		.customize-section-description-container + #customize-control-sccss_editor:last-child .CodeMirror {
 			height: calc(100vh - 331px);
@@ -98,7 +106,6 @@ function sccss_customizer_styles() { ?>
 		}
 	</style>
 	<?php
-
 }
 add_action( 'customize_controls_print_styles', 'sccss_customizer_styles', 999 );
 

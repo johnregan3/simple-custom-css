@@ -139,16 +139,18 @@ function sccss_render_submenu_page() {
 			<div id="templateside">
 				<?php do_action( 'sccss_sidebar_top' ); ?>
 
-				<p style="margin-top: 0"><?php esc_html_e( 'Simple Custom CSS allows you to add your own styles or override the default CSS of a plugin or theme.', 'simple-custom-css' ) ?></p>
-				<p style="margin-top: 0"><?php _e( 'The styles you save here will remain even if you switch themes.', 'simple-custom-css' ) ?></p>
+				<p style="margin-top: 0"><?php esc_html_e( 'Simple Custom CSS allows you to add your own styles or override the default CSS of a plugin or theme.', 'simple-custom-css' ); ?></p>
+				<p style="margin-top: 0"><?php _e( 'The styles you save here will remain even if you switch themes.', 'simple-custom-css' ); ?></p>
 
-				<p><?php esc_html_e( 'To use, enter your custom CSS, then click "Update Custom CSS".  It\'s that simple!', 'simple-custom-css' ) ?></p>
+				<p><?php esc_html_e( 'To use, enter your custom CSS, then click "Update Custom CSS".  It\'s that simple!', 'simple-custom-css' ); ?></p>
 				<?php submit_button( __( 'Update Custom CSS', 'simple-custom-css' ), 'primary', 'submit', true ); ?>
 
 				<?php if ( ! version_compare( $wp_version, 4.9 ) >= 0 ) : ?>
 					<p class="description">
-						<?php // translators: Placeholder represents the URL to the Customizer Section. ?>
-						<?php echo wp_kses_post( sprintf( __( 'Did you know that you can edit Simple Custom CSS in <a href="%s" title="Simple Custom CSS in the Customizer">the Customizer</a>?', 'simple-custom-css' ), esc_url( wp_customize_url() . '?autofocus[control]=sccss_editor' ) ) ); ?>
+						<?php
+						// translators: Placeholder represents the URL to the Customizer Section.
+						echo wp_kses_post( sprintf( __( 'Did you know that you can edit Simple Custom CSS in <a href="%s" title="Simple Custom CSS in the Customizer">the Customizer</a>?', 'simple-custom-css' ), esc_url( wp_customize_url() . '?autofocus[control]=sccss_editor' ) ) );
+						?>
 					</p>
 				<?php endif; ?>
 
