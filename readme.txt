@@ -72,7 +72,7 @@ For instance, you may have:
 
 When you need:
 
-	\#content a {
+	.content a {
 		color: #f00;
 	}
 

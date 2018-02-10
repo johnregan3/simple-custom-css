@@ -39,9 +39,11 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 ### Screenshots
 
 ***Settings Page***
+
 <img src="https://raw.githubusercontent.com/johnregan3/simple-custom-css/master/assets/screenshot-1.png" width="700px" />
 
 ***Customizer Section***
+
 <img src="https://raw.githubusercontent.com/johnregan3/simple-custom-css/master/assets/screenshot-2.png" width="700px" />
 
 ### Use
