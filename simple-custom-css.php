@@ -5,7 +5,7 @@
  * Description: The simple, solid way to add custom CSS to your WordPress website. Simple Custom CSS allows you to add your own styles or override the default CSS of a plugin or theme.
  * Author: John Regan, Danny Van Kooten
  * Author URI: http://johnregan3.me
- * Version: 4.0
+ * Version: 4.0.1
  * Text Domain: simple-custom-css
  *
  * Copyright 2014-2018  John Regan  (email : john@johnregan3.com)
@@ -25,7 +25,7 @@
  *
  * @package SCCSS
  * @author John Regan
- * @version 4.0
+ * @version 4.0.1
  */
 
 global $wp_version;
@@ -44,7 +44,8 @@ if ( ! is_admin() ) {
 	require_once dirname( SCCSS_FILE ) . '/includes/admin.php';
 }
 
-if ( version_compare( $wp_version, 4.9 ) >= 0 ) {
+// Load the customizer control on later versions of WP.
+if ( version_compare( $wp_version, 4.9 ) >= 0  ) {
 	require_once dirname( SCCSS_FILE ) . '/includes/customizer.php';
 }
 
