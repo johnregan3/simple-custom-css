@@ -63,13 +63,15 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 
 ###Changelog
 
+***4.0.1***
+* Fixed bug with broken editor styles on older versions of WP.
+
 ***4.0***
 * New Customizer Control (still compatible with older WP versions)
 * Added colors and linting to the Settings Page
 * Updated hooks to replace hyphens with underscores
 * Tested for WPCS compliance
 * Tested for compatibility with WP version 4.9.4
-
 
 ***3.3***
 * Added support for https://
@@ -124,4 +126,4 @@ Instead of using print_scripts to insert the CSS directly into the HEAD, CSS sty
 ...even though no css file is actually generated.
 
 ***1.0***
-* Inital Release
+* Initial Release

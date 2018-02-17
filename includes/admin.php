@@ -75,13 +75,14 @@ function sccss_register_codemirror( $hook ) {
 	// Note that this only loads on the admin tools page (Appearance > Custom CSS).
 	if ( 'appearance_page_simple-custom-css' === $hook ) {
 		// Maintaining for backwards compatibility.
-		wp_enqueue_style( 'sccss-editor-css', plugins_url( 'simple-custom-css/includes/css/editor.css' ) );
-		wp_enqueue_style( 'sccss-codemirror-css', plugins_url( 'simple-custom-css/codemirror/codemirror.min.css' ) );
-		wp_enqueue_script( 'sccss-codemirror-js', plugins_url( 'simple-custom-css/codemirror/codemirror.js' ), array(), '20180208', true );
 		wp_enqueue_script( 'sccss-css-lint-js', plugins_url( 'simple-custom-css/codemirror/csslint.js' ), array( 'sccss-codemirror-js' ), '1.0.3', true );
 		wp_enqueue_script( 'sccss-codemirror-lint-js', plugins_url( 'simple-custom-css/codemirror/codemirror-lint.js' ), array( 'sccss-css-lint-js' ), '20180208', true );
-		wp_enqueue_script( 'sccss-codemirror-css-js', plugins_url( 'simple-custom-css/codemirror/css.js' ), array( 'sccss-codemirror-lint-js' ), '20180208', true );
 		wp_enqueue_script( 'sccss-codemirror-css-lint-js', plugins_url( 'simple-custom-css/codemirror/codemirror-css-lint.js' ), array( 'sccss-codemirror-css-js' ), '20180208', true );
+		wp_enqueue_script( 'sccss-codemirror-js', plugins_url( 'simple-custom-css/codemirror/codemirror.js' ), array(), '20180208', true );
+		wp_enqueue_script( 'sccss-codemirror-css-js', plugins_url( 'simple-custom-css/codemirror/css.js' ), array( 'sccss-codemirror-lint-js' ), '20180208', true );
+
+		wp_enqueue_style( 'sccss-codemirror-css', plugins_url( 'simple-custom-css/codemirror/codemirror.min.css' ) );
+		wp_enqueue_style( 'sccss-editor-css', plugins_url( 'simple-custom-css/includes/css/editor.css' ) );
 	}
 }
 
@@ -178,9 +179,9 @@ function sccss_render_submenu_page() {
 				var editor = CodeMirror.fromTextArea( document.getElementById( 'sccss_settings[sccss-content]' ), {
 					lineNumbers: true,
 					lineWrapping: true,
+					mode: 'text/css',
 					indentUnit: 2,
 					tabSize: 2,
-					mode: 'text/css',
 					lint: true,
 					gutters: [ 'CodeMirror-lint-markers' ]
 				} );
