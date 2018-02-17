@@ -45,7 +45,7 @@ if ( ! is_admin() ) {
 }
 
 // Load the customizer control on later versions of WP.
-if ( version_compare( $wp_version, 4.9 ) >= 0  ) {
+if ( version_compare( $wp_version, 4.9 ) >= 0 ) {
 	require_once dirname( SCCSS_FILE ) . '/includes/customizer.php';
 }
 
