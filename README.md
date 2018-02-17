@@ -64,7 +64,7 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 ###Changelog
 
 ***4.0.1***
-* Fixes bug with broken editor styles on older versions of WP.
+* Fixed bug with broken editor styles on older versions of WP.
 
 ***4.0***
 * New Customizer Control (still compatible with older WP versions)

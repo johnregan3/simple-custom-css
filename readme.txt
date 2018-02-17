@@ -91,7 +91,7 @@ Please check your CSS at the [W3C CSS Validation Service](http://jigsaw.w3.org/c
 == Changelog ==
 
 = 4.0.1 =
-* Fixes bug with broken editor styles on older versions of WP.
+* Fixed bug with broken editor styles on older versions of WP.
 
 = 4.0 =
 * New Customizer Control (still compatible with older WP versions)
