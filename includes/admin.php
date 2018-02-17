@@ -177,14 +177,14 @@ function sccss_render_submenu_page() {
 		<script language="javascript">
 			jQuery( document ).ready( function() {
 				var editor = CodeMirror.fromTextArea( document.getElementById( 'sccss_settings[sccss-content]' ), {
-                    lineNumbers: true,
-                    lineWrapping: true,
-                    mode: 'text/css',
-                    indentUnit: 2,
-                    tabSize: 2,
-                    lint: true,
-                    gutters: [ 'CodeMirror-lint-markers' ]
-                } );
+					lineNumbers: true,
+					lineWrapping: true,
+					mode: 'text/css',
+					indentUnit: 2,
+					tabSize: 2,
+					lint: true,
+					gutters: [ 'CodeMirror-lint-markers' ]
+				} );
 			} );
 		</script>
 	</div>
