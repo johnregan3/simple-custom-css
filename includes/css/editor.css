@@ -1,3 +1,16 @@
 .CodeMirror {
     max-width: 98%;
+    border: 1px solid #ddd;
+    margin-right: 0 !important;
 }
+
+.CodeMirror div {
+    margin-right: 0 !important;
+}
+
+.CodeMirror .CodeMirror-gutters {
+    padding-left: 8px;
+}
+
+
+
