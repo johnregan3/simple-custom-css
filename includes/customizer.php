@@ -5,7 +5,7 @@
  * This is set to only load for WP Version 4.9+.
  *
  * @package SCCSS
- * @since   4.0
+ * @since   4.0.0
  * @author  John Regan <john@johnregan3.com>
  */
 
@@ -17,7 +17,7 @@ if ( ! defined( 'SCCSS_FILE' ) ) {
 /**
  * Register Customizer functionality.
  *
- * @since  4.0
+ * @since  4.0.0
  *
  * @action customize_register, 11
  *
@@ -68,7 +68,7 @@ add_action( 'customize_register', 'sccss_customize_register', 11 );
 /**
  * Render the Custom CSS in the Customizer.
  *
- * @since  4.0
+ * @since  4.0.0
  *
  * @action wp_head, 99
  */
@@ -88,7 +88,7 @@ add_action( 'wp_head', 'sccss_customizer_css', 99 );
 /**
  * Add custom styles to the Customizer Editor Control.
  *
- * @since 4.0
+ * @since 4.0.0
  *
  * @action customize_controls_print_styles
  */

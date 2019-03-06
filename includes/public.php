@@ -3,7 +3,7 @@
  * Front-facing functionality.
  *
  * @package SCCSS
- * @since   2.0
+ * @since   2.0.0
  * @author  John Regan <john@johnregan3.com>
  */
 
@@ -19,7 +19,7 @@ if ( ! defined( 'SCCSS_FILE' ) ) {
  * This query var is passed to the URL, and when it is detected by scss_maybe_print_css(),
  * it writes its PHP/CSS to the browser.
  *
- * @since  1.0
+ * @since  1.0.0
  *
  * @action wp_enqueue_scripts, 99
  */
@@ -42,7 +42,7 @@ add_action( 'wp_enqueue_scripts', 'sccss_register_style', 99 );
 /**
  * If the query var is set, print the Simple Custom CSS rules.
  *
- * @since  1.0
+ * @since  1.0.0
  *
  * @action plugins_loaded
  */
@@ -65,7 +65,7 @@ add_action( 'plugins_loaded', 'sccss_maybe_print_css' );
 /**
  * Echo the CSS.
  *
- * @since 4.0
+ * @since 4.0.0
  */
 function sccss_the_css() {
 	$options     = get_option( 'sccss_settings' );
