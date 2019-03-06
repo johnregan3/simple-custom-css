@@ -89,7 +89,7 @@ Please check your CSS at the [W3C CSS Validation Service](http://jigsaw.w3.org/c
 == Changelog ==
 
 = 4.0.2 =
-* Uses WP's CodeMirror on settings page
+* Use WP's CodeMirror on settings page
 * Tested for compatibility with WP version 5.1
 
 = 4.0.1 =

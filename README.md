@@ -65,7 +65,7 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 ### Changelog
 
 ***4.0.2***
-* Uses WP's CodeMirror on settings page
+* Use WP's CodeMirror on settings page
 * Tested for compatibility with WP version 5.1
 
 ***4.0.1***

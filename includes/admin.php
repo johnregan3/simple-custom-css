@@ -15,7 +15,7 @@ if ( ! defined( 'SCCSS_FILE' ) ) {
 /**
  * Determine if WP's CodeMirror is available.
  *
- * As CodeMirror was added in ver 4.9, simply check the
+ * As CodeMirror was added in ver 4.9, simply compare with the
  * current WP version.
  *
  * @since 4.0.2
@@ -24,7 +24,7 @@ if ( ! defined( 'SCCSS_FILE' ) ) {
  */
 function sccss_wp_codemirror_available() {
 	$wp_version = get_bloginfo( 'version' );
-	return ( version_compare( $wp_version, 4.9 ) <= 0 );
+	return ( version_compare( $wp_version, 4.9 ) >= 0 );
 }
 
 /**
@@ -75,7 +75,7 @@ register_uninstall_hook( SCCSS_FILE, 'sccss_uninstall' );
 /**
  * Enqueues Scripts/Styles for Syntax Highlighter.
  *
- * @since  4.0.2 Add WP CodeMirror Support
+ * @since  4.0.2 Add WP CodeMirror Support.
  * @since  4.0.0 Updated scripts, added linting.
  * @since  3.0.0
  *
@@ -152,7 +152,6 @@ add_action( 'admin_init', 'sccss_register_settings' );
  * @since 1.0.0
  */
 function sccss_render_submenu_page() {
-	global $wp_version;
 
 	$options = get_option( SCCSS_OPTION );
 	$content = isset( $options['sccss-content'] ) && ! empty( $options['sccss-content'] ) ? $options['sccss-content'] : __( '/* Enter Your Custom CSS Here */', 'simple-custom-css' );
@@ -178,7 +177,7 @@ function sccss_render_submenu_page() {
 				<p><?php esc_html_e( 'To use, enter your custom CSS, then click "Update Custom CSS".  It\'s that simple!', 'simple-custom-css' ); ?></p>
 				<?php submit_button( __( 'Update Custom CSS', 'simple-custom-css' ), 'primary', 'submit', true ); ?>
 
-				<?php if ( ! version_compare( $wp_version, 4.9 ) >= 0 ) : ?>
+				<?php if ( sccss_wp_codemirror_available() ) : ?>
 					<p class="description">
 						<?php
 						// translators: Placeholder represents the URL to the Customizer Section.
