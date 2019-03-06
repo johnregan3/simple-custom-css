@@ -13,10 +13,6 @@ language: php
 # @link http://docs.travis-ci.com/user/workers/container-based-infrastructure/#Routing-your-build-to-container-based-infrastructure
 sudo: false
 
-
-language:
-    - php
-
 php:
     - 5.4
     - 7.2
