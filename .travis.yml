@@ -24,11 +24,11 @@ env:
     # Trunk
     # @link https://github.com/WordPress/WordPress
     - WP_VERSION=master WP_MULTISITE=0
-    # - WP_VERSION=master WP_MULTISITE=1
+    - WP_VERSION=master WP_MULTISITE=1
     # WordPress 4.6
     # @link https://github.com/WordPress/WordPress/tree/4.6-branch
     - WP_VERSION=4.6 WP_MULTISITE=0
-    # - WP_VERSION=4.6 WP_MULTISITE=1
+    - WP_VERSION=4.6 WP_MULTISITE=1
 
 # Use this to prepare your build for testing.
 # e.g. copy database configurations, environment variables, etc.
@@ -68,11 +68,11 @@ before_script:
     - phpenv rehash
     # Install JSCS: JavaScript Code Style checker
     # @link http://jscs.info/
-    - npm install -g jscs
+    # - npm install -g jscs
     # Install JSHint, a JavaScript Code Quality Tool
     # @link http://jshint.com/docs/
-    - npm install -g jshint
-    - wget https://develop.svn.wordpress.org/trunk/.jshintrc
+    # - npm install -g jshint
+    # - wget https://develop.svn.wordpress.org/trunk/.jshintrc
 
 # Run test script commands.
 # Default is specific to project language.
