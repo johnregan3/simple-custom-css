@@ -104,18 +104,19 @@ function sccss_register_codemirror( $hook ) {
 
 		wp_enqueue_style( 'sccss-codemirror-css', plugins_url( 'simple-custom-css/codemirror/codemirror.min.css' ) );
 
-		wp_add_inline_script( 'sccss-codemirror-js',
-		'jQuery( document ).ready( function() {
-			var editor = CodeMirror.fromTextArea( document.getElementById( "sccss_settings[sccss-content]" ), {
-				lineNumbers: true,
-				lineWrapping: true,
-				mode:"text/css",
-				indentUnit: 2,
-				tabSize: 2,
-				lint: true,
-				gutters: [ "CodeMirror-lint-markers" ]
-			} );
-		} )( CodeMirror );'
+		wp_add_inline_script(
+			'sccss-codemirror-js',
+			'jQuery( document ).ready( function() {
+				var editor = CodeMirror.fromTextArea( document.getElementById( "sccss_settings[sccss-content]" ), {
+					lineNumbers: true,
+					lineWrapping: true,
+					mode:"text/css",
+					indentUnit: 2,
+					tabSize: 2,
+					lint: true,
+					gutters: [ "CodeMirror-lint-markers" ]
+				} );
+			} )( CodeMirror );'
 		);
 	}
 }

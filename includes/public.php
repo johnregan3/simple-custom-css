@@ -30,9 +30,15 @@ function sccss_register_style() {
 		$url = home_url( '/', 'https' );
 	}
 
-	wp_register_style( 'sccss_style', add_query_arg( array(
-		'sccss' => 1,
-	), $url ) );
+	wp_register_style(
+		'sccss_style',
+		add_query_arg(
+			array(
+				'sccss' => 1,
+			),
+			$url
+		)
+	);
 
 	wp_enqueue_style( 'sccss_style' );
 }

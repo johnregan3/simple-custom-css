@@ -17,17 +17,12 @@
         <exclude name="Squiz.Commenting.FunctionComment.MissingParamTag" />
         <exclude name="Squiz.Commenting.InlineComment.InvalidEndChar" />
         <exclude name="Squiz.Commenting.InlineComment.NotCapital" />
-
     </rule>
     <rule ref="WordPress-Docs">
 
     </rule>
 
     <rule ref="Squiz.Commenting.FunctionComment.ScalarTypeHintMissing">
-        <severity>0</severity>
-    </rule>
-
-    <rule ref="PSR12.Keywords.ShortFormTypeKeywords">
         <severity>0</severity>
     </rule>
 </ruleset>
