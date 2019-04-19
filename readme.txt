@@ -3,7 +3,7 @@ Contributors: johnregan3, dvankooten
 Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BAG2XC69ZYADQ
 Tags: css, styles, custom css, custom, code, editor, codemirror
 Requires at least: 3.0.1
-Tested up to: 5.1
+Tested up to: 5.1.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -16,7 +16,7 @@ An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin an
 
 ** New in Version 4.0.2 **
 - Uses native WP CodeMirror on settings page (Does not load unnecessary scripts)
-- Tested for WP version 5.1
+- Tested for WP version 5.1.1
 - Tested for PHP version 7.2
 
 **Features**
@@ -91,7 +91,7 @@ Please check your CSS at the [W3C CSS Validation Service](http://jigsaw.w3.org/c
 
 = 4.0.2 =
 * Use WP's CodeMirror on settings page
-* Tested for compatibility with WP version 5.1
+* Tested for compatibility with WP version 5.1.1
 * Tested for compatibility with PHP version 7.2
 
 = 4.0.1 =
@@ -163,7 +163,7 @@ Instead of using print_scripts() to insert the CSS directly into the HEAD, CSS s
 == Upgrade Notice ==
 
 = 4.0.2 =
-Tested for compatibility with WP 5.1/PHP 7.2.  Use native WP CodeMirror.
+Tested for compatibility with WP 5.1.1/PHP 7.2.  Use native WP CodeMirror.
 
 = 4.0.1 =
 Settings page style fixes for older versions of WP.

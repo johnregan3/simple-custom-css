@@ -5,7 +5,7 @@ An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin an
 
 **New in Version 4.0.2**
 - Uses native WP CodeMirror on settings page (Does not load unnecessary scripts)
-- Tested for WP version 5.1
+- Tested for WP version 5.1.1
 - Tested for PHP version 7.2
 
 **Features**
@@ -62,12 +62,12 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 [Simple Custom CSS Wiki](https://github.com/johnregan3/simple-custom-css/wiki "Simple Custom CSS Wiki")
 
 [Support Forum](http://wordpress.org/support/plugin/simple-custom-css "Support Forum")
- 
+
 ### Changelog
 
 ***4.0.2***
 * Use WP's CodeMirror on settings page
-* Tested for compatibility with WP version 5.1
+* Tested for compatibility with WP version 5.1.1
 * Tested for compatibility with PHP version 7.2
 
 ***4.0.1***
