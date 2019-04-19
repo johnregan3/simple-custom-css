@@ -3,22 +3,22 @@ Simple Custom CSS Plugin
 
 An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin and Theme default styles. This plugin is designed to meet the needs of administrators who would like to add their own CSS to their WordPress website.  Styles created with this plugin will render even if the theme is changed.
 
-**New in Version 4.0**
-
-- Customizer Control (finally!)
-- Tested for WP version 4.9.4
-- Code linting (error checking) on the settings page
+**New in Version 4.0.2**
+- Uses native WP CodeMirror on settings page (Does not load unnecessary scripts)
+- Tested for WP version 5.1.1
+- Tested for PHP version 7.2
 
 **Features**
 
 - Customizer Control
 - Useful Code Syntax Highlighter
+- Code linting (error checking)
 - No configuration needed
 - Simple interface built on WordPress UI
 - Virtually no impact on site performance
 - No complicated database queries
 - Thorough documentation
-- Allows Administrator access on Multisite
+- Allows Administrator access on WP Networks (Multisite)
 
 ### Installation
 
@@ -38,15 +38,17 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 
 ### Screenshots
 
-***Settings Page***
+#### Settings Page
+
 <img src="https://raw.githubusercontent.com/johnregan3/simple-custom-css/master/assets/screenshot-1.png" width="700px" />
 
-***Customizer Section***
-<img src="https://raw.githubusercontent.com/johnregan3/simple-custom-css/master/assets/screenshot-2.png" width="700px" />
+#### Customizer Section
 
-### Use
+<img src="https://raw.githubusercontent.com/johnregan3/simple-custom-css/master/assets/screenshot-2.png" width="300px" />
 
-1.  Navigate to Appearance > Custom CSS in the Admin Menu.
+### Usage
+
+1.  Navigate to Appearance > Custom CSS in the Admin Menu
 
 2.  Enter in valid CSS styles
 
@@ -60,8 +62,13 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 [Simple Custom CSS Wiki](https://github.com/johnregan3/simple-custom-css/wiki "Simple Custom CSS Wiki")
 
 [Support Forum](http://wordpress.org/support/plugin/simple-custom-css "Support Forum")
- 
+
 ### Changelog
+
+***4.0.2***
+* Use WP's CodeMirror on settings page
+* Tested for compatibility with WP version 5.1.1
+* Tested for compatibility with PHP version 7.2
 
 ***4.0.1***
 * Fixed bug with broken editor styles on older versions of WP.
@@ -102,7 +109,7 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 
 ***1.2.1***
 * Tested for compatibility with WP 3.7.1
-* Code update to conform fully with WP coding standards.
+* Code update to conform fully with WP coding standards
 
 ***1.2***
 * Give Admins (not just Super Admins) access to the plugin
@@ -119,7 +126,7 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 * Added author attribution option
 * Added a more elegant method for adding CSS to the page:
 
-Instead of using print_scripts to insert the CSS directly into the HEAD, CSS styles are generated within simple-custom-css.php (the sole file for this plugin), then added via wp_enqueue_scripts, so now it will appear in the HEAD as:
+Instead of using print_scripts() to insert the CSS directly into the HEAD, CSS styles are generated within simple-custom-css.php, then added via wp_enqueue_scripts, so now it will appear in the HEAD as:
 
 		<link rel="stylesheet" href="http://yoursite.com/?sccss=1" />
 

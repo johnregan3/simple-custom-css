@@ -5,7 +5,7 @@
  * This is set to only load for WP Version 4.9+.
  *
  * @package SCCSS
- * @since   4.0
+ * @since   4.0.0
  * @author  John Regan <john@johnregan3.com>
  */
 
@@ -17,7 +17,7 @@ if ( ! defined( 'SCCSS_FILE' ) ) {
 /**
  * Register Customizer functionality.
  *
- * @since  4.0
+ * @since  4.0.0
  *
  * @action customize_register, 11
  *
@@ -26,27 +26,39 @@ if ( ! defined( 'SCCSS_FILE' ) ) {
 function sccss_customize_register( $wp_customize ) {
 	$section_id = 'sccss_section';
 
-	$wp_customize->add_section( $section_id, array(
-		'title'       => __( 'Simple Custom CSS', 'simple-custom-css' ),
-		'capability'  => 'manage_options',
-		'description' => __( 'Simple Custom CSS allows you to add your own styles that will remain even if you change your theme.', 'simple-custom-css' ),
-	) );
+	$wp_customize->add_section(
+		$section_id,
+		array(
+			'title'       => __( 'Simple Custom CSS', 'simple-custom-css' ),
+			'capability'  => 'manage_options',
+			'description' => __( 'Simple Custom CSS allows you to add your own styles that will remain even if you change your theme.', 'simple-custom-css' ),
+		)
+	);
 
-	$wp_customize->add_setting( SCCSS_OPTION . '[sccss-content]', array(
-		'type' => 'option',
-	) );
+	$wp_customize->add_setting(
+		SCCSS_OPTION . '[sccss-content]',
+		array(
+			'type' => 'option',
+		)
+	);
 
-	$control = $wp_customize->add_control( new WP_Customize_Code_Editor_Control( $wp_customize, 'sccss_editor', array(
-		'label'       => '',
-		'section'     => $section_id,
-		'settings'    => array(
-			'default' => SCCSS_OPTION . '[sccss-content]',
-		),
-		'code_type'   => 'text/css',
-		'input_attrs' => array(
-			'aria-describedby' => 'editor-keyboard-trap-help-1 editor-keyboard-trap-help-2 editor-keyboard-trap-help-3 editor-keyboard-trap-help-4',
-		),
-	) ) );
+	$control = $wp_customize->add_control(
+		new WP_Customize_Code_Editor_Control(
+			$wp_customize,
+			'sccss_editor',
+			array(
+				'label'       => '',
+				'section'     => $section_id,
+				'settings'    => array(
+					'default' => SCCSS_OPTION . '[sccss-content]',
+				),
+				'code_type'   => 'text/css',
+				'input_attrs' => array(
+					'aria-describedby' => 'editor-keyboard-trap-help-1 editor-keyboard-trap-help-2 editor-keyboard-trap-help-3 editor-keyboard-trap-help-4',
+				),
+			)
+		)
+	);
 
 	if ( $control instanceof WP_Customize_Code_Editor_Control ) {
 		$options = array();
@@ -68,7 +80,7 @@ add_action( 'customize_register', 'sccss_customize_register', 11 );
 /**
  * Render the Custom CSS in the Customizer.
  *
- * @since  4.0
+ * @since  4.0.0
  *
  * @action wp_head, 99
  */
@@ -88,7 +100,7 @@ add_action( 'wp_head', 'sccss_customizer_css', 99 );
 /**
  * Add custom styles to the Customizer Editor Control.
  *
- * @since 4.0
+ * @since  4.0.0
  *
  * @action customize_controls_print_styles
  */
@@ -98,6 +110,7 @@ function sccss_customizer_styles() {
 		.customize-section-description-container + #customize-control-sccss_editor:last-child .CodeMirror {
 			height: calc(100vh - 331px);
 		}
+
 		.customize-section-description-container + #customize-control-sccss_editor:last-child {
 			margin-left: -12px;
 			width: 299px;
@@ -107,5 +120,6 @@ function sccss_customizer_styles() {
 	</style>
 	<?php
 }
+
 add_action( 'customize_controls_print_styles', 'sccss_customizer_styles', 999 );
 
