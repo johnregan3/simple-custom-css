@@ -23,6 +23,9 @@ php:
 # @link http://docs.travis-ci.com/user/workers/container-based-infrastructure/#Routing-your-build-to-container-based-infrastructure
 sudo: false
 
+services:
+  - mysql
+
 # Declare which versions of WordPress to test against.
 # Also declare whether or not to test in Multisite.
 env:
