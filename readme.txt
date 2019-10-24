@@ -3,7 +3,7 @@ Contributors: johnregan3, dvankooten
 Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BAG2XC69ZYADQ
 Tags: css, styles, custom css, custom, code, editor, codemirror
 Requires at least: 3.0.1
-Tested up to: 5.1.1
+Tested up to: 5.3
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -21,11 +21,11 @@ An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin an
 
 **Features**
 
-- Customizer Control
+- Customizer Control (live preview)
 - Useful Code Syntax Highlighter
 - Code linting (error checking)
 - No configuration needed
-- Simple interface built on WordPress UI
+- Simple interface built on native WordPress UI
 - Virtually no impact on site performance
 - No complicated database queries
 - Thorough documentation
@@ -88,6 +88,9 @@ Please check your CSS at the [W3C CSS Validation Service](http://jigsaw.w3.org/c
 2. The Simple Custom CSS Customizer Section
 
 == Changelog ==
+
+= 4.0.3 =
+* Tested for compatibility with WP version 5.3
 
 = 4.0.2 =
 * Use WP's CodeMirror on settings page

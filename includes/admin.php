@@ -89,7 +89,7 @@ function sccss_register_codemirror( $hook ) {
 		return;
 	}
 
-	wp_enqueue_style( 'sccss-editor-css', plugins_url( 'simple-custom-css/includes/css/editor.css' ) );
+	wp_enqueue_style( 'sccss-editor-css', plugins_url( 'simple-custom-css/includes/css/editor.css' ), array(), '20190306' );
 
 	if ( sccss_wp_codemirror_available() ) {
 		wp_enqueue_code_editor( array( 'type' => 'text/html' ) );
@@ -102,7 +102,7 @@ function sccss_register_codemirror( $hook ) {
 		wp_enqueue_script( 'sccss-codemirror-js', plugins_url( 'simple-custom-css/codemirror/codemirror.js' ), array(), '20180208', true );
 		wp_enqueue_script( 'sccss-codemirror-css-js', plugins_url( 'simple-custom-css/codemirror/css.js' ), array( 'sccss-codemirror-lint-js' ), '20180208', true );
 
-		wp_enqueue_style( 'sccss-codemirror-css', plugins_url( 'simple-custom-css/codemirror/codemirror.min.css' ) );
+		wp_enqueue_style( 'sccss-codemirror-css', plugins_url( 'simple-custom-css/codemirror/codemirror.min.css' ), array(), '20190306' );
 
 		wp_add_inline_script(
 			'sccss-codemirror-js',
@@ -157,7 +157,7 @@ function sccss_render_submenu_page() {
 	$options = get_option( SCCSS_OPTION );
 	$content = isset( $options['sccss-content'] ) && ! empty( $options['sccss-content'] ) ? $options['sccss-content'] : __( '/* Enter Your Custom CSS Here */', 'simple-custom-css' );
 
-	if ( isset( $_GET['settings-updated'] ) ) : ?>
+	if ( isset( $_GET['settings-updated'] ) ) : // phpcs:ignore WordPress.Security.NonceVerification ?>
 		<div id="message" class="updated">
 			<p><?php esc_html_e( 'Custom CSS updated successfully.', 'simple-custom-css' ); ?></p></div>
 	<?php endif; ?>
@@ -182,7 +182,7 @@ function sccss_render_submenu_page() {
 					<p class="description">
 						<?php
 						// translators: Placeholder represents the URL to the Customizer Section.
-						echo wp_kses_post( sprintf( __( 'Did you know that you can edit Simple Custom CSS in <a href="%s" title="Simple Custom CSS in the Customizer">the Customizer</a>?', 'simple-custom-css' ), esc_url( wp_customize_url() . '?autofocus[control]=sccss_editor' ) ) );
+						echo wp_kses_post( sprintf( __( 'Did you know that you can preview your CSS live in <a href="%s" title="Simple Custom CSS in the Customizer">the Customizer</a>?', 'simple-custom-css' ), esc_url( wp_customize_url() . '?autofocus[control]=sccss_editor' ) ) );
 						?>
 					</p>
 				<?php endif; ?>

@@ -3,18 +3,16 @@ Simple Custom CSS Plugin
 
 An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin and Theme default styles. This plugin is designed to meet the needs of administrators who would like to add their own CSS to their WordPress website.  Styles created with this plugin will render even if the theme is changed.
 
-**New in Version 4.0.2**
-- Uses native WP CodeMirror on settings page (Does not load unnecessary scripts)
-- Tested for WP version 5.1.1
-- Tested for PHP version 7.2
+**New in Version 4.0.3**
+- Tested for WP version 5.3
 
 **Features**
 
-- Customizer Control
+- Customizer Control (live preview)
 - Useful Code Syntax Highlighter
 - Code linting (error checking)
 - No configuration needed
-- Simple interface built on WordPress UI
+- Simple interface built on native WordPress UI
 - Virtually no impact on site performance
 - No complicated database queries
 - Thorough documentation
@@ -64,6 +62,9 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 [Support Forum](http://wordpress.org/support/plugin/simple-custom-css "Support Forum")
 
 ### Changelog
+
+***4.0.3***
+* Tested for compatibility with WP version 5.3
 
 ***4.0.2***
 * Use WP's CodeMirror on settings page

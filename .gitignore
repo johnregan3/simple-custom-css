@@ -15,6 +15,7 @@ Thumbs.db
 *.sublime-project
 *.sublime-workspace
 *.komodoproject
+*.code-workspace
 
 # ignore log files and databases
 *.log

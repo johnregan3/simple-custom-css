@@ -30,7 +30,7 @@ function sccss_register_style() {
 		$url = home_url( '/', 'https' );
 	}
 
-	wp_register_style(
+	wp_register_style( // phpcs:ignore WordPress.WP.EnqueuedResourceParameters
 		'sccss_style',
 		add_query_arg(
 			array(
@@ -55,7 +55,7 @@ add_action( 'wp_enqueue_scripts', 'sccss_register_style', 99 );
 function sccss_maybe_print_css() {
 
 	// Only print CSS if this is a stylesheet request.
-	if ( ! isset( $_GET['sccss'] ) || intval( $_GET['sccss'] ) !== 1 ) {
+	if ( ! isset( $_GET['sccss'] ) || intval( $_GET['sccss'] ) !== 1 ) {  // phpcs:ignore WordPress.Security.NonceVerification
 		return;
 	}
 
@@ -78,5 +78,5 @@ function sccss_the_css() {
 	$raw_content = isset( $options['sccss-content'] ) ? $options['sccss-content'] : '';
 	$content     = wp_kses( $raw_content, array( '\'', '\"' ) );
 	$content     = str_replace( '&gt;', '>', $content );
-	echo $content; // WPCS: xss okay.
+	echo $content; // phpcs:ignore WordPress.Security.EscapeOutput
 }
