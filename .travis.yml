@@ -26,9 +26,13 @@ env:
     - WP_VERSION=master WP_MULTISITE=0
     - WP_VERSION=master WP_MULTISITE=1
     # WordPress 5.2
-    # @link https://github.com/WordPress/WordPress/tree/4.2-branch
+    # @link https://github.com/WordPress/WordPress/tree/5.2-branch
     - WP_VERSION=5.2 WP_MULTISITE=0
     - WP_VERSION=5.2 WP_MULTISITE=1
+
+before_install:
+  # Create WordPress database.
+  - mysql -u root -e 'CREATE DATABASE wordpress_test;'
 
 # Use this to prepare your build for testing.
 # e.g. copy database configurations, environment variables, etc.
@@ -51,8 +55,7 @@ before_script:
     - sed -i "s/youremptytestdbnamehere/wordpress_test/" wp-tests-config.php
     - sed -i "s/yourusernamehere/root/" wp-tests-config.php
     - sed -i "s/yourpasswordhere//" wp-tests-config.php
-    # Create WordPress database.
-    - mysql -u root -e 'CREATE DATABASE wordpress_test;'
+
     # Install CodeSniffer for WordPress Coding Standards checks.
     - mkdir php-codesniffer && curl -L https://github.com/squizlabs/PHP_CodeSniffer/archive/master.tar.gz | tar xz --strip-components=1 -C php-codesniffer
     # Install WordPress Coding Standards.
