@@ -1,0 +1,29 @@
+{
+    "name": "johnregan3/simple-custom-css",
+    "license": "GPL-2.0-or-later",
+    "description": "Simple Custom CSS is a WordPress Plugin to add custom CSS styles that override Plugin and Theme default styles.",
+    "homepage": "https://wordpress.org/plugins/simple-custom-css",
+    "keywords": [
+        "blog",
+        "cms",
+        "wordpress",
+        "wp"
+    ],
+    "support": {
+        "issues": "https://github.com/johnregan3/simple-custom-css/issues"
+    },
+    "require": {
+        "php": ">=5.6"
+    },
+    "require-dev": {
+        "dealerdirect/phpcodesniffer-composer-installer": "~0.5.0",
+        "wp-coding-standards/wpcs": "~2.1.0",
+        "phpcompatibility/phpcompatibility-wp": "^2.1.0"
+    },
+    "scripts": {
+        "compat": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --standard=phpcompat.xml.dist --report=summary,source",
+        "format": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf --report=summary,source",
+        "lint": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --report=summary,source",
+        "lint:errors": "@lint -n"
+    }
+}
