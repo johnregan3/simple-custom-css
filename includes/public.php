@@ -17,7 +17,7 @@ if ( ! defined( 'SCCSS_FILE' ) ) {
  */
 function sccss_add_frontend_hooks() {
 	if ( sccss_is_amp_request() ) { // @todo Why not just do this all the time?
-		add_action( 'wp_head', 'sccss_print_inline_css' );
+		add_action( 'wp_head', 'sccss_print_inline_css', 101 );
 	} else {
 		add_action( 'wp_enqueue_scripts', 'sccss_register_style', 99 );
 	}
