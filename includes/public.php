@@ -42,6 +42,7 @@ function sccss_register_style() {
 		$url = home_url( '/', 'https' );
 	}
 
+	// @todo The ver should be set to the timestamp that the CSS was last edited.
 	wp_register_style( // phpcs:ignore WordPress.WP.EnqueuedResourceParameters
 		'sccss_style',
 		add_query_arg(
@@ -70,6 +71,7 @@ function sccss_maybe_print_css() {
 	}
 
 	ob_start();
+	// @todo Send Cache-Control header and ETag header.
 	header( 'Content-type: text/css' );
 
 	sccss_the_css();
