@@ -159,73 +159,57 @@ Instead of using print_scripts() to insert the CSS directly into the HEAD, CSS s
 
 ...even though no css file is actually generated.
 
-***1.0***
+***1.0***  
 * Initial Release
 
 
 ## Upgrade Notice
 
-***4.0.5***
-
+***4.0.5***  
 Added AMP Support. Tested for compatibility with WP 5.4.1.
 
-***4.0.4***
-
+***4.0.4***  
 Tested for compatibility with WP 5.4.1.
 
-***4.0.2***
-
+***4.0.2***  
 Tested for compatibility with WP 5.1.1/PHP 7.2.  Use native WP CodeMirror.
 
-***4.0.1***
-
+***4.0.1***  
 Settings page style fixes for older versions of WP.
 
-***4.0***
-
+***4.0***  
 Tested for compatibility with WP 4.9.4.  Added Customizer support.
 
-***3.3***
-
+***3.3***  
 Tested for compatibility with WP 4.4.1.  Added support for http://.
 
-***3.2***
-
+***3.2***  
 Tested for compatibility with WP 4.1.  Improved architecture to reduce the number of queries
 
-***3.0.1***
-
+***3.0.1***  
 Tested for compatibility with WP 3.9.1.  Sidebar "Update CSS" button added.
 
-***3.0***
-
+***3.0***  
 Added new Syntax highlighter, removed attribution text and need for "Allow Quotation Marks" option.
 
-***2.5***
-
+***2.5***  
 Fixed issue with WP installs in subdirectories.  Thanks @lopo!
 
-***2.0***
-
+***2.0***  
 Now SCCSS gives you the option to allow Double Quotes!
 
-***1.2.1***
-
+***1.2.1***  
 Compatibility with WP 3.7.1, code update to conform with WP coding standards.
 
-***1.2***
-
+***1.2***  
 Give Admins (not just Super Admins) access to the plugin & Correcting Credit error.
 
-***1.1.1***
-
+***1.1.1***  
 Allowing the ">" direct child selector.
 
-***1.1***
-
+***1.1***  
 Changed method for inserting CSS, added support for cleanup on deletion, other minor changes.
 
-***1.0***
-
+***1.0***  
 Inital Release
 
