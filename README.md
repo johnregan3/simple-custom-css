@@ -1,13 +1,13 @@
 # Simple Custom CSS Plugin
 
-Contributors: johnregan3
-Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BAG2XC69ZYADQ
-Tags: css, styles, custom css, custom, code, editor, customizer
-Requires at least: 3.0.1
-Tested up to: 5.8.1
-Stable tag: trunk
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Contributors: johnregan3  
+Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BAG2XC69ZYADQ  
+Tags: css, styles, custom css, custom, code, editor, customizer  
+Requires at least: 3.0.1  
+Tested up to: 5.8.1  
+Stable tag: trunk  
+License: GPLv2 or later  
+License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
 ## Description
 
