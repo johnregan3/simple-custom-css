@@ -179,12 +179,14 @@ function sccss_render_submenu_page() {
 				<?php submit_button( __( 'Update Custom CSS', 'simple-custom-css' ), 'primary', 'submit', true ); ?>
 
 				<?php if ( sccss_wp_codemirror_available() ) : ?>
-					<p class="description">
-						<?php
-						// translators: Placeholder represents the URL to the Customizer Section.
-						echo wp_kses_post( sprintf( __( 'Did you know that you can preview your CSS live in <a href="%s" title="Simple Custom CSS in the Customizer">the Customizer</a>?', 'simple-custom-css' ), esc_url( wp_customize_url() . '?autofocus[control]=sccss_editor' ) ) );
-						?>
-					</p>
+                    <?php if ( ! function_exists( 'gutenberg_is_fse_theme' ) || ! gutenberg_is_fse_theme() ) : ?>
+                        <p class="description">
+                            <?php
+                            // translators: Placeholder represents the URL to the Customizer Section.
+                            echo wp_kses_post( sprintf( __( 'Did you know that you can preview your CSS live in <a href="%s" title="Simple Custom CSS in the Customizer">the Customizer</a>?', 'simple-custom-css' ), esc_url( wp_customize_url() . '?autofocus[control]=sccss_editor' ) ) );
+                            ?>
+                        </p>
+                    <?php endif; ?>
 				<?php endif; ?>
 
 				<?php do_action( 'sccss_sidebar_bottom' ); ?>
