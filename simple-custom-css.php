@@ -8,7 +8,7 @@
  * Version: 4.0.6
  * Text Domain: simple-custom-css
  *
- * Copyright 2014-2021 2John Regan  (email : john@johnregan3.com)
+ * Copyright 2014-2022 John Regan  (email : john@johnregan3.com)
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2, as
