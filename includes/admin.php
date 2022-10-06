@@ -178,7 +178,7 @@ function sccss_render_submenu_page() {
 				<p><?php esc_html_e( 'To use, enter your custom CSS, then click "Update Custom CSS".  It\'s that simple!', 'simple-custom-css' ); ?></p>
 				<?php submit_button( __( 'Update Custom CSS', 'simple-custom-css' ), 'primary', 'submit', true ); ?>
 
-				<?php if ( sccss_wp_codemirror_available() ) : ?>
+				<?php if ( function_exists( 'wp_is_block_theme' ) && ! wp_is_block_theme() ) : ?>
 					<p class="description">
 						<?php
 						// translators: Placeholder represents the URL to the Customizer Section.
