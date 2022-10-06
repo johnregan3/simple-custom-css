@@ -1,28 +1,29 @@
 # Simple Custom CSS Plugin
 
-Contributors: johnregan3  
-Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BAG2XC69ZYADQ  
-Tags: css, styles, custom css, custom, code, editor, customizer  
-Requires at least: 3.0.1  
-Tested up to: 5.8.1  
-Stable tag: trunk  
-License: GPLv2 or later  
-License URI: http://www.gnu.org/licenses/gpl-2.0.html  
+Contributors: johnregan3
+Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BAG2XC69ZYADQ
+Tags: css, styles, custom css, custom, code, editor, customizer, amp, wp-amp
+Requires at least: 3.0.1
+Tested up to: 6.1
+Stable tag: trunk
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Description
 
 Add Custom CSS to your WordPress site without any hassles.
 
-An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin and Theme default styles. This plugin is designed to meet the needs of administrators who would like to add their own CSS to their WordPress website.  Styles created with this plugin will render even if the theme is changed.
+An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin and Theme default styles. This plugin is designed to meet the needs of administrators who would like to add their own CSS to their WordPress website. Styles created with this plugin will render even if the theme is changed.
 
-**New in Version 4.0.5**
+**New in Version 4.0.6**
 
-* AMP Support Added!
-* Tested for WP version 5.8.1
+* Removes Customizer features when using a Block Theme.
+* Tested for WP version 6.1
+* Tested for PHP 8.1
 
 **About AMP Support**
 
-This plugin no longer enqueues your saved styles in a "pseudo-file", but rather prints the styles directly into the `<head>` element.  This allows for better caching, and also processing by AMP plugins.
+This plugin no longer enqueues your saved styles in a "pseudo-file", but rather prints the styles directly into the `<head>` element. This allows for better caching, and also processing by AMP plugins.
 
 ### Features
 
@@ -81,6 +82,11 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 [Support Forum](http://wordpress.org/support/plugin/simple-custom-css "Support Forum")
 
 ## Changelog
+
+***4.0.6***
+* Remove Customizer features when using a Block Theme. Props @tricarte
+* Tested for compatibility with WP version 6.1
+* Tested for compatibility with PHP 8.1
 
 ***4.0.5***
 * AMP Support. Thanks, @westonruter!
@@ -159,57 +165,60 @@ Instead of using print_scripts() to insert the CSS directly into the HEAD, CSS s
 
 ...even though no css file is actually generated.
 
-***1.0***  
+***1.0***
 * Initial Release
 
 
 ## Upgrade Notice
 
-***4.0.5***  
+***4.0.6***
+Tested for compatibility with WP 6.1/PHP 8.1. Remove Customizer features when using Block Themes.
+
+***4.0.5***
 Added AMP Support. Tested for compatibility with WP 5.4.1.
 
-***4.0.4***  
+***4.0.4***
 Tested for compatibility with WP 5.4.1.
 
-***4.0.2***  
-Tested for compatibility with WP 5.1.1/PHP 7.2.  Use native WP CodeMirror.
+***4.0.2***
+Tested for compatibility with WP 5.1.1/PHP 7.2. Use native WP CodeMirror.
 
-***4.0.1***  
+***4.0.1***
 Settings page style fixes for older versions of WP.
 
-***4.0***  
-Tested for compatibility with WP 4.9.4.  Added Customizer support.
+***4.0***
+Tested for compatibility with WP 4.9.4. Added Customizer support.
 
-***3.3***  
-Tested for compatibility with WP 4.4.1.  Added support for http://.
+***3.3***
+Tested for compatibility with WP 4.4.1. Added support for http://.
 
-***3.2***  
-Tested for compatibility with WP 4.1.  Improved architecture to reduce the number of queries
+***3.2***
+Tested for compatibility with WP 4.1. Improved architecture to reduce the number of queries
 
-***3.0.1***  
-Tested for compatibility with WP 3.9.1.  Sidebar "Update CSS" button added.
+***3.0.1***
+Tested for compatibility with WP 3.9.1. Sidebar "Update CSS" button added.
 
-***3.0***  
+***3.0***
 Added new Syntax highlighter, removed attribution text and need for "Allow Quotation Marks" option.
 
-***2.5***  
-Fixed issue with WP installs in subdirectories.  Thanks @lopo!
+***2.5***
+Fixed issue with WP installs in subdirectories. Thanks @lopo!
 
-***2.0***  
+***2.0***
 Now SCCSS gives you the option to allow Double Quotes!
 
-***1.2.1***  
+***1.2.1***
 Compatibility with WP 3.7.1, code update to conform with WP coding standards.
 
-***1.2***  
+***1.2***
 Give Admins (not just Super Admins) access to the plugin & Correcting Credit error.
 
-***1.1.1***  
+***1.1.1***
 Allowing the ">" direct child selector.
 
-***1.1***  
+***1.1***
 Changed method for inserting CSS, added support for cleanup on deletion, other minor changes.
 
-***1.0***  
+***1.0***
 Inital Release
 

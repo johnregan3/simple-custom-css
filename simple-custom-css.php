@@ -45,7 +45,7 @@ if ( ! is_admin() ) {
 }
 
 // Load the customizer control on later versions of WP.
-if ( version_compare( $wp_version, 4.9 ) >= 0 ) {
+if ( function_exists( 'wp_is_block_theme' ) && ! wp_is_block_theme() ) {
 	include_once dirname( SCCSS_FILE ) . '/includes/customizer.php';
 }
 
