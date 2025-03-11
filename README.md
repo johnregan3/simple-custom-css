@@ -4,7 +4,7 @@ Contributors: johnregan3
 Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BAG2XC69ZYADQ
 Tags: css, styles, custom css, custom, code, editor, customizer, amp, wp-amp
 Requires at least: 3.0.1
-Tested up to: 6.1
+Tested up to: 6.7.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -15,15 +15,11 @@ Add Custom CSS to your WordPress site without any hassles.
 
 An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin and Theme default styles. This plugin is designed to meet the needs of administrators who would like to add their own CSS to their WordPress website. Styles created with this plugin will render even if the theme is changed.
 
-**New in Version 4.0.6**
 
-* Removes Customizer features when using a Block Theme.
-* Tested for WP version 6.1
-* Tested for PHP 8.1
+**New in Version 4.0.7**
 
-**About AMP Support**
-
-This plugin no longer enqueues your saved styles in a "pseudo-file", but rather prints the styles directly into the `<head>` element. This allows for better caching, and also processing by AMP plugins.
+* Tested for compatibility with WP 6.7.2
+* Tested for compatibility with PHP 8.4
 
 ### Features
 
@@ -82,6 +78,10 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 [Support Forum](http://wordpress.org/support/plugin/simple-custom-css "Support Forum")
 
 ## Changelog
+
+***4.0.7***
+* Tested for compatibility with WP 6.7.2
+* Tested for compatibility with PHP 8.4
 
 ***4.0.6***
 * Remove Customizer features when using a Block Theme. Props @tricarte
@@ -171,6 +171,9 @@ Instead of using print_scripts() to insert the CSS directly into the HEAD, CSS s
 
 ## Upgrade Notice
 
+***4.0.7***
+Tested for compatibility with WP 6.7.2/PHP 8.4.
+
 ***4.0.6***
 Tested for compatibility with WP 6.1/PHP 8.1. Remove Customizer features when using Block Themes.
 
@@ -220,5 +223,4 @@ Allowing the ">" direct child selector.
 Changed method for inserting CSS, added support for cleanup on deletion, other minor changes.
 
 ***1.0***
-Inital Release
-
+Initial Release
