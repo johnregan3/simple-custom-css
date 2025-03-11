@@ -19,7 +19,7 @@ An easy-to-use WordPress Plugin to add custom CSS styles that override Plugin an
 **New in Version 4.0.7**
 
 * Tested for compatibility with WP 6.7.2
-* Tested for compatibility with PHP 8.3
+* Tested for compatibility with PHP 8.4
 
 ### Features
 
@@ -81,7 +81,7 @@ Install Simple Custom CSS just as you would any other WP Plugin:
 
 ***4.0.7***
 * Tested for compatibility with WP 6.7.2
-* Tested for compatibility with PHP 8.3
+* Tested for compatibility with PHP 8.4
 
 ***4.0.6***
 * Remove Customizer features when using a Block Theme. Props @tricarte
@@ -172,7 +172,7 @@ Instead of using print_scripts() to insert the CSS directly into the HEAD, CSS s
 ## Upgrade Notice
 
 ***4.0.7***
-Tested for compatibility with WP 6.7.2/PHP 8.3.
+Tested for compatibility with WP 6.7.2/PHP 8.4.
 
 ***4.0.6***
 Tested for compatibility with WP 6.1/PHP 8.1. Remove Customizer features when using Block Themes.
